@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sattva Weddings</title>
+<meta name="description" content="Sattva Weddings: award-winning luxury Indian and destination wedding planners with studios in India, UAE, UK, USA and Canada.">
+<link rel="icon" type="image/svg+xml" href="logo-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Direction: an editorial wedding journal in Sattva's own brand: white pages, espresso ink, the bronze of the S monogram.
+   Layout: one idea per screen; tools and guides open as their own pages so nothing competes.
+   Signature: a gold thread that follows the cursor through the hero and ties each page together. */
+:root{
+  --paper:#faf7f2;   /* surface */
+  --paper-2:#f1ebe1; /* raised */
+  --ink:#1e1711;     /* content, 16.8:1 on paper */
+  --ink-2:#5a4e43;   /* secondary, 7.9:1 */
+  --night:#17120d;   /* dark sections */
+  --gold:#75603b;    /* brand bronze, text-safe, 5.9:1 on paper */
+  --gold-b:#8b7349;  /* brand bronze from the profile, large type and fills */
+  --gold-l:#dcc296;  /* bronze on night, 10.4:1 */
+  --blush:#e3b8a6;   /* signal */
+  --line:rgba(30,23,17,.13);
+  --display:"Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --body:"Manrope","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:300 17px/1.75 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--display);font-weight:300;line-height:1.06;margin:0;text-wrap:balance;letter-spacing:-.025em}
+h1{font-size:clamp(46px,7.4vw,118px);font-weight:200}
+h2{font-size:clamp(34px,4.8vw,68px)}
+h3{font-size:clamp(22px,2vw,28px);font-weight:400;letter-spacing:-.01em}
+em{font-style:normal;color:var(--gold-b);font-weight:400}
+.dark em{color:var(--gold-l)}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.label{font:500 11.5px/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.dark .label{color:var(--gold-l)}
+.lede{font-size:clamp(18px,1.5vw,21px);color:var(--ink-2);max-width:56ch;line-height:1.65}
+.dark{background:var(--night);color:#f6efe5}
+.dark .lede{color:#cbbfae}
+.num{font-variant-numeric:tabular-nums lining-nums}
+section{padding:clamp(80px,12vw,160px) 0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+.sr{position:absolute;left:-9999px}
+
+/* buttons & links */
+.btn{--bg:var(--ink);--fg:var(--paper);position:relative;display:inline-flex;align-items:center;gap:12px;background:var(--bg);color:var(--fg);border:0;border-radius:999px;padding:18px 30px;font:500 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;overflow:hidden;transition:transform .5s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--gold-b);transform:translateY(101%);transition:transform .5s var(--ease);border-radius:inherit}
+.btn:hover::before{transform:none}
+.btn span{position:relative}
+.btn.line{--bg:transparent;--fg:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn.line:hover{--fg:var(--paper)}
+.dark .btn{--bg:var(--gold-l);--fg:var(--night)}
+.dark .btn::before{background:#fff}
+.dark .btn.line{--bg:transparent;--fg:#f6efe5;box-shadow:inset 0 0 0 1px rgba(244,235,227,.5)}
+.dark .btn.line:hover{--fg:var(--night)}
+.arrow{display:inline-flex;align-items:center;gap:10px;font:500 13px var(--body);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink);background:none;border:0;cursor:pointer;padding:6px 0}
+.arrow i{display:inline-block;width:28px;height:1px;background:currentColor;position:relative;transition:width .5s var(--ease)}
+.arrow i::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid;border-right:1px solid;transform:rotate(45deg)}
+.arrow:hover i{width:46px}
+.dark .arrow{color:#f6efe5}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;transition:background .5s,color .5s,transform .5s var(--ease)}
+.hdr .wrap{display:flex;align-items:center;height:84px;gap:32px}
+.hdr.on-dark{color:#f6efe5}
+.hdr.solid{background:rgba(247,242,234,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--ink);border-bottom:1px solid var(--line)}
+.hdr.hide{transform:translateY(-100%)}
+.logo{text-decoration:none;display:flex;align-items:center;gap:14px;line-height:1}
+.logo .lm{width:46px;height:46px}
+.logo .lw{height:30px;width:auto}
+.hdr.on-dark .lw-d,.hdr:not(.on-dark) .lw-l{display:none}
+@media (max-width:420px){.logo .lw{height:24px}.logo .lm{width:38px;height:38px}}
+.hdr nav{display:flex;gap:30px;margin-left:auto}
+.hdr nav>a,.mega-btn{text-decoration:none;font-size:14px;letter-spacing:.04em;position:relative;padding:4px 0}
+.mega-btn.cur-on{text-decoration:underline;text-underline-offset:6px}
+.hdr nav>a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.hdr nav a:hover::after,.hdr nav a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
+.menu-btn{background:none;border:1px solid currentColor;color:inherit;border-radius:999px;height:44px;padding:0 20px;font:500 12px var(--body);letter-spacing:.2em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:10px}
+.menu-btn i{display:grid;gap:5px}.menu-btn i::before,.menu-btn i::after{content:"";display:block;width:16px;height:1px;background:currentColor}
+.cur{background:none;border:0;color:inherit;font:500 13px var(--body);cursor:pointer}
+@media (max-width:1000px){.hdr nav{display:none}.hdr .wrap{justify-content:space-between;gap:14px}}
+@media (max-width:620px){.hdr .cur{display:none}.hdr .wrap{padding:0 20px}.menu-cur{display:block!important}}
+
+/* destinations mega menu */
+.has-mega{position:relative}
+.mega-btn{background:none;border:0;color:inherit;font:inherit;font-size:14px;letter-spacing:.04em;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:4px 0}
+.mega-btn::after{content:"";width:6px;height:6px;border-right:1px solid;border-bottom:1px solid;transform:rotate(45deg) translateY(-2px);transition:transform .3s}
+.has-mega.open .mega-btn::after{transform:rotate(225deg)}
+.mega{position:fixed;left:0;right:0;top:84px;background:var(--paper);color:var(--ink);border-block:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(23,18,13,.35);opacity:0;visibility:hidden;transform:translateY(-10px);transition:all .45s var(--ease);max-height:calc(100vh - 100px);overflow:auto}
+.has-mega.open .mega{opacity:1;visibility:visible;transform:none}
+.mega .wrap{display:grid;grid-template-columns:1fr 1.4fr 1.6fr 1fr;gap:40px;padding-top:40px;padding-bottom:40px;height:auto;align-items:start}
+.mega h4{font:500 11px var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.mega ul{list-style:none;margin:0;padding:0;columns:2;column-gap:24px}
+.mega .c1 ul{columns:1}
+.mega li{break-inside:avoid}
+.mega li a{display:flex;justify-content:space-between;gap:8px;padding:6px 0;text-decoration:none;font-size:14px;color:var(--ink)}
+.mega li a small{color:var(--ink-2);font-size:12px}
+.mega li a:hover{color:var(--gold)}
+.mega .feat{display:grid;gap:14px;text-decoration:none}
+.mega .feat .ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden}
+.mega .feat b{font:300 22px var(--display)}
+.hdr nav a::after{bottom:0}
+
+/* property cards and categories */
+.cats{display:flex;flex-wrap:wrap;gap:8px}
+.cat-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:none;border-radius:999px;padding:10px 16px;font:400 14px var(--body);color:var(--ink);cursor:pointer;transition:all .3s}
+.cat-chip small{color:var(--ink-2);font-size:12px}
+.cat-chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.cat-chip[aria-pressed="true"] small{color:var(--gold-l)}
+.pgrid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:44px 26px}
+.pcard{text-decoration:none;display:grid;gap:12px;align-content:start}
+.pcard .ph{aspect-ratio:4/5;border-radius:4px;overflow:hidden}
+.pcard .ph img,.pcard .ph canvas{transition:transform 1.4s var(--ease)}
+.pcard:hover .ph img,.pcard:hover .ph canvas{transform:scale(1.06)}
+.pcard .tagc{position:absolute;left:14px;top:14px;background:rgba(250,247,242,.94);color:var(--ink);border-radius:999px;padding:5px 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;z-index:2}
+.pcard .film-dot{position:absolute;right:14px;top:14px;width:30px;height:30px;border-radius:50%;background:rgba(23,18,13,.75);z-index:2}
+.pcard .film-dot::after{content:"";position:absolute;left:12px;top:9px;border-left:9px solid var(--gold-l);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.pcard h3{font-size:22px;line-height:1.2}
+.pcard p{font-size:13px;color:var(--ink-2)}
+.pcard .meta{display:flex;gap:16px;font-size:13px;color:var(--ink-2)}
+.pcard .meta b{color:var(--ink);font-weight:500}
+.rail .pcard{flex:none;width:min(72vw,320px);scroll-snap-align:start}
+.dark .pcard p,.dark .pcard .meta{color:#cbbfae}.dark .pcard .meta b{color:#f6efe5}
+.more{display:flex;justify-content:center;margin-top:50px}
+
+/* film panel */
+.filmbox{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;margin-top:44px;display:block;text-decoration:none;background:var(--night)}
+.filmbox canvas,.filmbox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform 1.4s var(--ease),opacity .5s}
+.filmbox:hover canvas,.filmbox:hover img{transform:scale(1.04);opacity:.7}
+.filmbox .in{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:16px;color:#fff;text-align:center;padding:20px}
+.filmbox .big-play{width:84px;height:84px;border-radius:50%;border:1px solid rgba(255,255,255,.6);display:grid;place-items:center;transition:transform .5s var(--ease)}
+.filmbox:hover .big-play{transform:scale(1.08)}
+.filmbox .big-play::after{content:"";margin-left:6px;border-left:20px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
+.filmbox b{font:300 clamp(20px,2vw,28px) var(--display)}
+.filmbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* fullscreen menu */
+.menu{position:fixed;inset:0;z-index:80;background:var(--night);color:#f6efe5;display:grid;grid-template-columns:1.2fr 1fr;clip-path:inset(0 0 100% 0);transition:clip-path .9s var(--ease);visibility:hidden}
+.menu.open{clip-path:inset(0);visibility:visible}
+.menu .links{padding:120px 6vw 60px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.menu .links a{font:400 clamp(38px,5.4vw,76px)/1.08 var(--display);text-decoration:none;display:flex;align-items:baseline;gap:22px;opacity:.55;transition:opacity .4s,transform .6s var(--ease);transform:translateY(30px)}
+.menu.open .links a{transform:none}
+.menu .links a:hover{opacity:1}
+.menu .links a sup{font:500 11px var(--body);letter-spacing:.2em;color:var(--gold-l)}
+.menu aside{border-left:1px solid rgba(244,235,227,.12);padding:120px 5vw 60px;display:flex;flex-direction:column;justify-content:flex-end;gap:28px}
+.menu .close{position:absolute;top:22px;right:28px;color:#f6efe5;border-color:rgba(244,235,227,.5)}
+@media (max-width:860px){.menu{grid-template-columns:1fr}.menu aside{display:none}}
+
+/* curtain + cursor + progress */
+.curtain{position:fixed;inset:0;z-index:90;background:var(--night);transform:translateY(100%);pointer-events:none;display:grid;place-items:center}
+.curtain img{width:88px;opacity:0;transition:opacity .3s}
+.curtain.in{transition:transform .55s var(--ease);transform:none}.curtain.in img{opacity:1}
+.curtain.out{transition:transform .7s var(--ease);transform:translateY(-100%)}
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold-b);transform-origin:left;transform:scaleX(0);z-index:70}
+.cursor{position:fixed;top:0;left:0;width:36px;height:36px;margin:-18px 0 0 -18px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:100;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s;mix-blend-mode:multiply;display:none}
+.cursor.big{width:76px;height:76px;margin:-38px 0 0 -38px;background:rgba(139,115,73,.12)}
+@media (hover:hover) and (pointer:fine){.cursor{display:block}}
+
+/* views */
+.view{display:none}.view.on{display:block}
+.reveal{transition:transform 1.1s var(--ease),opacity 1.1s var(--ease)}
+.js-motion .reveal.pre{transform:translateY(40px);opacity:.001}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em}
+.split .w>span{display:inline-block;transition:transform 1.2s var(--ease)}
+.js-motion .split.pre .w>span{transform:translateY(105%)}
+
+/* hero */
+.hero{min-height:min(100svh,980px);position:relative;display:flex;align-items:flex-end;padding:140px 0 70px;overflow:hidden}
+.hero-bg{position:absolute;inset:-4%;background:url(img/aarti-gold.jpg) center 35%/cover;transform:scale(1.04);animation:kb 22s var(--ease) infinite alternate}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,18,13,.55),rgba(23,18,13,.35) 40%,rgba(23,18,13,.92))}
+@keyframes kb{to{transform:scale(1.12) translate(-1.5%,-1%)}}
+#thread{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;width:100%;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:end}
+.hero h1 em{color:var(--gold-l)}
+.hero .meta{display:grid;gap:26px;justify-items:start;padding-bottom:14px}
+.award{display:flex;gap:14px;align-items:center;font-size:14px;color:#cbbfae}
+.award svg{flex:none}
+.scroll-cue{position:absolute;left:50%;bottom:22px;width:1px;height:46px;background:rgba(244,235,227,.25);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;top:-46px;left:0;width:1px;height:46px;background:var(--gold-l);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:46px}}
+.hero-ph{position:absolute!important;right:28px;top:120px;width:min(26vw,360px);aspect-ratio:3/4;border-radius:999px 999px 6px 6px;overflow:hidden;opacity:.9}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-ph{display:none}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:26px 0;white-space:nowrap}
+.marquee div{display:inline-flex;gap:48px;animation:mq 60s linear infinite;font:200 clamp(26px,3vw,42px) var(--display);letter-spacing:.02em;text-transform:uppercase}
+.marquee span{display:inline-flex;align-items:center;gap:48px}
+.marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* intro split */
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+@media (max-width:900px){.split2{grid-template-columns:1fr;gap:40px}}
+
+/* about, mission, promises, work */
+.mv{display:grid;gap:60px}
+.mv-ph{aspect-ratio:2.6/1;border-radius:4px;overflow:hidden}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+@media (max-width:760px){.mv-grid{grid-template-columns:1fr}.mv-ph{aspect-ratio:16/9}}
+.promises{list-style:none;margin:0;padding:0;border-top:1px solid rgba(246,239,229,.15)}
+.promises li{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:34px 0;border-bottom:1px solid rgba(246,239,229,.15)}
+.promises span{font:200 34px var(--display);color:var(--gold-l)}
+.promises p{color:#cbbfae;margin-top:10px}
+.work{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(140px,16vw,230px);gap:14px}
+.work .ph{border-radius:4px;overflow:hidden}
+.work .ph:nth-child(1){grid-column:span 4;grid-row:span 2}.work .ph:nth-child(2){grid-column:span 2;grid-row:span 2}
+.work .ph:nth-child(3){grid-column:span 3}.work .ph:nth-child(4){grid-column:span 2}.work .ph:nth-child(5){grid-column:span 1}
+.work img,.mv-ph img,.lead-story img,#why img{transition:transform 1.6s var(--ease)}
+.work .ph:hover img,.mv-ph:hover img,.lead-story:hover img{transform:scale(1.05)}
+.work figcaption{position:absolute;left:16px;bottom:14px;color:#fff;font:400 11px var(--display);letter-spacing:.24em;text-transform:uppercase;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+@media (max-width:760px){.work{grid-template-columns:1fr 1fr}.work .ph{grid-column:span 1!important;grid-row:span 1!important}.work .ph:nth-child(1){grid-column:span 2!important}}
+
+/* three paths */
+.paths{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.path{padding:44px 36px 40px 0;border-right:1px solid var(--line);display:grid;gap:18px;align-content:start;text-decoration:none;transition:background .6s var(--ease)}
+.path+.path{padding-left:36px}
+.path:last-child{border-right:0}
+.path .n{font:300 15px var(--display);letter-spacing:.2em;color:var(--gold)}
+.path p{color:var(--ink-2);font-size:16px}
+.path .ic{width:54px;height:54px;color:var(--gold)}
+.path:hover .arrow i{width:46px}
+@media (max-width:900px){.paths{grid-template-columns:1fr}.path,.path+.path{padding:36px 0;border-right:0;border-bottom:1px solid var(--line)}}
+
+/* destination rail */
+.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px max(28px,calc((100vw - 1240px)/2 + 28px)) 30px;scroll-padding-left:max(28px,calc((100vw - 1240px)/2 + 28px));cursor:grab;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail.drag{cursor:grabbing;scroll-snap-type:none}
+.rcard{flex:none;width:min(78vw,380px);scroll-snap-align:start;text-decoration:none;display:grid;gap:16px}
+.rcard .ph{aspect-ratio:4/5;border-radius:4px;overflow:hidden;position:relative}
+.rcard .ph canvas,.rcard .ph img{transition:transform 1.4s var(--ease)}
+.rcard:hover .ph canvas,.rcard:hover .ph img{transform:scale(1.06)}
+.rcard .ph .count{position:absolute;left:16px;top:16px;background:rgba(247,242,234,.92);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:12px;letter-spacing:.06em}
+.rcard h3{font-size:34px}
+.rcard p{color:var(--ink-2);font-size:14px}
+.ph{background:var(--paper-2);margin:0;position:relative}
+.ph canvas,.ph img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* quote */
+.quote{font:200 clamp(28px,3.6vw,52px)/1.25 var(--display);max-width:24ch;letter-spacing:-.01em}
+.quote+cite{display:block;margin-top:28px;font-style:normal}
+
+/* studios line */
+.studios{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(244,235,227,.15)}
+.studio{padding:28px 20px 0 0}
+.studio b{font:300 24px var(--display);display:block}
+.studio small{display:block;color:#cbbfae;font-size:13px;margin-top:6px}
+.studio .t{color:var(--gold-l);font-size:13px;letter-spacing:.08em}
+@media (max-width:860px){.studios{grid-template-columns:repeat(2,1fr)}}
+
+/* page head */
+.phead{padding:180px 0 70px}
+.phead .lede{margin-top:28px}
+.crumbs{font-size:13px;color:var(--ink-2);margin-bottom:28px;display:flex;gap:10px;flex-wrap:wrap}
+.crumbs a{text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* destinations index */
+.tools-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;border-block:1px solid var(--line);padding:18px 0;margin-bottom:56px;position:sticky;top:84px;background:var(--paper);z-index:5}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{background:none;border:0;border-radius:999px;padding:10px 18px;font:400 15px var(--body);color:var(--ink-2);cursor:pointer;transition:all .3s}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.tab:hover{color:var(--ink)}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--ink);padding:6px 2px;min-width:240px}
+.search input{border:0;background:none;font:400 16px var(--body);color:var(--ink);outline:none;width:100%}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:56px 28px}
+.dcard{text-decoration:none;display:grid;gap:14px}
+.dcard .ph{aspect-ratio:5/4;border-radius:4px;overflow:hidden}
+.dcard .ph canvas{transition:transform 1.4s var(--ease)}
+.dcard:hover .ph canvas{transform:scale(1.06)}
+.dcard .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.dcard h3{font-size:30px}
+.dcard small{color:var(--ink-2);font-size:13px;white-space:nowrap}
+.dcard p{color:var(--ink-2);font-size:14px;line-height:1.55}
+
+/* destination page */
+.dhero{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:end}
+.dhero-ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden}
+@media (max-width:860px){.dhero{grid-template-columns:1fr}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin:56px 0 0}
+.facts div{padding:22px 20px 22px 0}
+.facts div+div{padding-left:20px;border-left:1px solid var(--line)}
+.facts small{display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.facts b{font:400 24px var(--display)}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}}
+.filters{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;margin:60px 0 26px}
+.filters label{font-size:13px;color:var(--ink-2);display:flex;gap:10px;align-items:center}
+.filters select,.filters input[type=range]{accent-color:var(--gold)}
+select,input,textarea{font:400 16px var(--body);color:var(--ink)}
+.filters select{background:none;border:0;border-bottom:1px solid var(--ink);padding:6px 4px}
+.vlist{border-top:1px solid var(--line)}
+.vrow{display:grid;grid-template-columns:2.4fr 1fr .8fr .9fr auto;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:background .4s,padding .4s var(--ease)}
+.vrow:hover{background:var(--paper-2);padding-inline:18px}
+.vrow h4{font-size:24px}
+.vrow .note{color:var(--ink-2);font-size:14px;margin-top:4px}
+.vrow .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);display:block}
+.vrow .v{font:400 20px var(--display)}
+.vrow .act{display:flex;gap:8px;justify-content:flex-end}
+.heart{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;display:grid;place-items:center;color:var(--ink);transition:all .3s}
+.heart[aria-pressed="true"]{background:var(--ink);color:var(--gold-l);border-color:var(--ink)}
+.heart svg{width:18px;height:18px}
+.pill{font-size:12px;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--ink-2);text-transform:capitalize;white-space:nowrap}
+@media (max-width:820px){.vrow{grid-template-columns:1fr 1fr;row-gap:10px}.vrow>div:first-child{grid-column:1/-1}.vrow .act{grid-column:1/-1;justify-content:flex-start}}
+.empty{padding:50px 0;color:var(--ink-2)}
+
+/* shortlist drawer */
+.sl-btn{position:fixed;right:24px;bottom:24px;z-index:55;display:none}
+.sl-btn.on{display:inline-flex}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100vw);background:var(--paper);z-index:85;transform:translateX(100%);transition:transform .7s var(--ease);box-shadow:-30px 0 80px -40px rgba(23,18,13,.5);display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:26px 28px;border-bottom:1px solid var(--line)}
+.drawer .body{overflow:auto;padding:12px 28px 28px;flex:1}
+.drawer .it{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.scrim{position:fixed;inset:0;background:rgba(23,18,13,.35);z-index:84;opacity:0;pointer-events:none;transition:opacity .5s}
+.scrim.on{opacity:1;pointer-events:auto}
+
+/* property page */
+.vhero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:end}
+.vhero-ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden}
+.vhero-ph figcaption,.dhero-ph figcaption{position:absolute;left:14px;bottom:12px;color:#fff;font:400 11px var(--display);letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.6);z-index:2}
+.vstats{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin-top:34px}
+.vstats div{padding:18px 14px 18px 0}.vstats div+div{padding-left:14px;border-left:1px solid var(--line)}
+.vstats b{display:block;font:300 26px var(--display)}.vstats small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+@media (max-width:900px){.vhero{grid-template-columns:1fr}.vstats{grid-template-columns:1fr 1fr}.vstats div:nth-child(3){padding-left:0;border-left:0}}
+.film{display:flex;gap:20px;align-items:center;margin-top:44px;padding:22px;border:1px solid var(--line);border-radius:6px;text-decoration:none;transition:background .4s}
+.film:hover{background:var(--paper-2)}
+.film b{display:block;font:400 20px var(--display);margin:6px 0 2px}
+.play{flex:none;width:58px;height:58px;border-radius:50%;background:var(--ink);position:relative}
+.play::after{content:"";position:absolute;left:23px;top:19px;border-left:16px solid var(--gold-l);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.pgrid{display:grid;grid-template-columns:1.6fr 1fr;gap:70px;align-items:start}
+@media (max-width:960px){.pgrid{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:repeat(2,220px);gap:12px;margin:56px 0}
+.gallery .ph{border-radius:4px;overflow:hidden}
+.gallery .ph:first-child{grid-row:span 2}
+.gallery figcaption{position:absolute;left:14px;bottom:12px;font-size:12px;letter-spacing:.08em;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+table.t{width:100%;border-collapse:collapse;font-size:15px}
+.t th{text-align:left;font:500 11px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:12px 10px 12px 0;border-bottom:1px solid var(--ink)}
+.t td{padding:14px 10px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.t td:first-child{font:400 19px var(--display)}
+.scroll-x{overflow-x:auto}
+.ptabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin:0 0 28px;flex-wrap:wrap}
+.ptabs button{background:none;border:0;border-bottom:1px solid transparent;margin-bottom:-1px;padding:14px 0;font:400 15px var(--body);color:var(--ink-2);cursor:pointer}
+.ptabs button[aria-selected="true"]{color:var(--ink);border-color:var(--ink)}
+.tp{display:none}.tp.on{display:block}
+.sticky-card{position:sticky;top:110px;border:1px solid var(--line);border-radius:6px;padding:30px;display:grid;gap:18px;background:var(--paper)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:15px}
+.kv dt{color:var(--ink-2)}.kv dd{margin:0;text-align:right}
+ul.ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ul.ticks li{padding-left:24px;position:relative}
+ul.ticks li::before{content:"";position:absolute;left:0;top:.8em;width:12px;height:1px;background:var(--gold)}
+
+.fac3{display:grid;gap:40px}.fac3 h3{margin-bottom:16px}
+/* services */
+.svc{border-top:1px solid var(--line)}
+.svc details{border-bottom:1px solid var(--line)}
+.svc summary{list-style:none;display:grid;grid-template-columns:70px 1fr auto;gap:24px;align-items:center;padding:30px 0;cursor:pointer}
+.svc summary::-webkit-details-marker{display:none}
+.svc .ic{width:56px;height:56px;color:var(--gold)}
+.svc h3{transition:transform .6s var(--ease)}
+.svc summary:hover h3{transform:translateX(10px)}
+.svc .sub{color:var(--ink-2);font-size:15px;margin-top:6px}
+.svc .pm{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .5s var(--ease),background .4s}
+.svc details[open] .pm{transform:rotate(45deg);background:var(--ink);color:var(--paper)}
+.svc .inner{display:grid;grid-template-columns:70px 1fr 1fr;gap:24px;padding:0 0 36px}
+.svc .inner ul{grid-column:2}
+@media (max-width:760px){.svc summary,.svc .inner{grid-template-columns:44px 1fr auto}.svc .ic{width:40px;height:40px}.svc .inner ul{grid-column:1/-1}}
+
+/* motion icons */
+.mi{width:100%;height:100%;overflow:visible}
+.mi .d{stroke-dasharray:1;stroke-dashoffset:0}
+.js-motion .in-view .mi .d{animation:draw 1.8s var(--ease) both}
+.mi .d2{animation-delay:.3s!important}
+.mi .flame{transform-origin:12px 9px;animation:flick 1.6s ease-in-out infinite}
+.mi .spin{transform-origin:12px 12px;animation:spin 16s linear infinite}
+.mi .float{animation:float 3.4s ease-in-out infinite}
+.mi .pulse{transform-origin:12px 12px;animation:pulse 2.6s ease-in-out infinite}
+.mi .sway{transform-origin:12px 22px;animation:sway 3.2s ease-in-out infinite}
+.mi .blink{animation:blink 3s ease-in-out infinite}
+.mi .note{animation:note 2.6s ease-in-out infinite}.mi .note.b{animation-delay:1.3s}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes flick{0%,100%{transform:scale(1)}30%{transform:scale(.88,1.08) rotate(-3deg)}60%{transform:scale(1.06,.94) rotate(2deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.7}}
+@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes blink{0%,86%,100%{opacity:0}90%{opacity:1}}
+@keyframes note{0%{transform:translateY(2px);opacity:0}40%{opacity:1}100%{transform:translateY(-5px);opacity:0}}
+
+/* forms */
+.field{display:grid;gap:8px}
+.field label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.field input,.field select,.field textarea{background:transparent;border:0;border-bottom:1px solid rgba(30,23,17,.35);border-radius:0;padding:10px 0;width:100%;transition:border-color .3s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.field textarea{min-height:90px;resize:vertical}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px 28px}
+.err{color:#9a3b2c;font-size:14px;min-height:1.2em}
+.ok{border-left:2px solid var(--gold);padding:6px 0 6px 18px}
+.ok b{font:300 24px var(--display);display:block;margin-bottom:6px}
+input[type=range]{accent-color:var(--ink);width:100%}
+input[type=checkbox],input[type=radio]{accent-color:var(--ink);width:18px;height:18px}
+
+/* planner */
+.planner{display:grid;grid-template-columns:1.3fr 1fr;gap:70px;align-items:start}
+@media (max-width:980px){.planner{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:40px}
+.steps button{background:none;border:0;border-top:1px solid var(--line);padding:14px 0 0;text-align:left;font:400 14px var(--body);color:var(--ink-2);cursor:pointer;position:relative}
+.steps button::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:0;background:var(--ink);transition:width .7s var(--ease)}
+.steps button[aria-current="step"]{color:var(--ink)}.steps button[aria-current="step"]::before,.steps button.done::before{width:100%}
+.steps span{display:block;font:300 13px var(--display);letter-spacing:.2em;color:var(--gold)}
+.step{display:none}.step.on{display:grid;gap:32px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:12px 18px;font-size:15px;cursor:pointer;transition:all .3s;user-select:none}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip:has(input:checked){background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{background:none;border:0;border-radius:999px;padding:8px 14px;font:400 13px var(--body);color:var(--ink-2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.trow{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.estimate{position:sticky;top:110px;background:var(--night);color:#f6efe5;border-radius:6px;padding:36px;display:grid;gap:22px}
+.estimate .total{font:400 clamp(32px,3.2vw,46px)/1.05 var(--display);white-space:nowrap}
+.estimate small{color:#cbbfae;font-size:13px}
+.bars{display:grid;gap:12px}
+.bar{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:13px}
+.bar i{grid-column:1/-1;display:block;height:2px;background:rgba(244,235,227,.12);position:relative}
+.bar i b{position:absolute;inset:0 auto 0 0;background:var(--gold-l);transition:width .9s var(--ease)}
+.bar .v{color:#cbbfae}
+.rates{margin-top:70px}
+.hint{font-size:14px;color:var(--ink-2)}
+
+/* rsvp */
+.rtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:44px}
+.rp{display:none}.rp.on{display:block}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-block:1px solid var(--line);margin-bottom:40px}
+.kpi{padding:22px 20px 22px 0}
+.kpi+.kpi{border-left:1px solid var(--line);padding-left:20px}
+.kpi b{font:400 40px var(--display);display:block}
+.kpi small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+.st{font-size:12px;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.st.yes{background:var(--ink);color:var(--paper)}.st.no{border:1px solid var(--blush);color:#9a3b2c}.st.wait{border:1px solid var(--line);color:var(--ink-2)}
+.mini{background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font:400 12px var(--body);color:var(--ink);cursor:pointer;text-decoration:none;white-space:nowrap}
+.mini:hover{border-color:var(--ink)}
+.fnrow{display:grid;grid-template-columns:1.2fr 1fr .8fr 1.3fr 1.1fr auto;gap:16px;align-items:end;padding:14px 0;border-bottom:1px solid var(--line)}
+@media (max-width:860px){.fnrow{grid-template-columns:1fr 1fr}}
+.invite{background:var(--night);color:#f6efe5;border-radius:6px;padding:clamp(30px,5vw,64px);text-align:center;margin-top:30px}
+.invite h3{font-size:clamp(40px,5vw,64px);margin:14px 0}
+.sched{display:grid;gap:0;text-align:left;margin-top:34px;border-top:1px solid rgba(244,235,227,.15)}
+.sched .it{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(244,235,227,.15)}
+.sched small{color:var(--gold-l);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.sched a{color:var(--gold-l)}
+
+/* press */
+.press{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start}
+@media (max-width:900px){.press{grid-template-columns:1fr}}
+.lead-story{text-decoration:none;display:grid;gap:22px}
+.lead-story .ph{aspect-ratio:4/3;border-radius:4px;overflow:hidden}
+.cap{position:absolute;left:16px;bottom:14px;color:#fff;font:400 11px var(--display);letter-spacing:.22em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.plist a{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.plist a:first-child{border-top:1px solid var(--line)}
+.plist b{font:400 24px/1.2 var(--display);display:block;margin:6px 0}
+.plist span.m{color:var(--ink-2);font-size:14px}
+
+/* footer */
+footer{padding:120px 0 40px}
+.fbig{font:200 clamp(44px,8vw,132px)/1 var(--display);letter-spacing:-.03em}
+.fbig em{color:var(--gold-l)}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-top:80px;padding-top:40px;border-top:1px solid rgba(244,235,227,.15);font-size:15px}
+.fcols a{text-decoration:none;display:block;padding:4px 0;color:#cbbfae}.fcols a:hover{color:#f6efe5}
+@media (max-width:860px){.fcols{grid-template-columns:1fr}}
+.dark .field label{color:#cbbfae}
+.dark .field input,.dark .field textarea,.dark .field select{color:#f6efe5;border-color:rgba(244,235,227,.3)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,140%);background:var(--ink);color:var(--paper);padding:14px 24px;border-radius:999px;font-size:14px;z-index:120;transition:transform .5s var(--ease);visibility:hidden}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+.dev{font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:16px;margin-top:40px}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .cursor{display:none!important}
+}
+
+/* alignment fixes v6 */
+.drawer{box-shadow:none;visibility:hidden;transition:transform .7s var(--ease),visibility 0s .7s}
+.drawer.open{visibility:visible;box-shadow:-30px 0 80px -40px rgba(23,18,13,.5);transition:transform .7s var(--ease)}
+.curtain{visibility:hidden}.curtain.in,.curtain.out{visibility:visible}
+.cursor{opacity:0}.cursor.live{opacity:1}
+.mini{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:32px;padding:0 14px;line-height:1;vertical-align:middle}
+.path{display:flex;flex-direction:column;gap:18px}.path .arrow{margin-top:auto;padding-top:8px}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
+.shead>div{min-width:0;flex:1}.shead .arrow{flex-shrink:0;white-space:nowrap;padding-bottom:8px}
+@media (max-width:620px){.shead{flex-direction:column;align-items:flex-start;gap:18px}}
+
+/* gallery */
+.gal-cats{margin:6px 0 34px}
+.gal{columns:3 320px;column-gap:18px}
+.gi{break-inside:avoid;margin:0 0 18px;position:relative}
+.gopen{display:block;width:100%;padding:0;border:0;background:var(--night);cursor:zoom-in;overflow:hidden;position:relative;border-radius:2px}
+.gopen img,.gopen video{display:block;width:100%;height:auto;transition:transform 1.4s var(--ease)}
+.gopen:hover img,.gopen:hover video{transform:scale(1.035)}
+.gi figcaption{font-size:14px;color:var(--ink-2);padding:12px 2px 0}
+.gplay{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border:1px solid rgba(246,239,229,.8);border-radius:50%;pointer-events:none}
+.gplay:after{content:"";position:absolute;left:26px;top:21px;border-left:16px solid #f6efe5;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.gyt{aspect-ratio:16/9;display:grid;place-items:end start;padding:18px;background:radial-gradient(120% 90% at 30% 20%,#3a2c1d,#17120d);color:#dcc296}
+.gyt small{font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.gctl{display:flex;gap:6px;align-items:center;margin-top:10px}
+.gctl input{flex:1;min-width:0;height:34px;border:1px solid var(--line);border-radius:999px;padding:0 14px;font:400 13px var(--body);background:none;color:var(--ink)}
+.gctl button{height:34px;min-width:34px;padding:0 12px;border:1px solid var(--line);border-radius:999px;background:none;font:400 12px var(--body);cursor:pointer;color:var(--ink)}
+.gctl button[data-del]{color:#8a3b2a}
+.gal-admin{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-bottom:40px}
+.gal-admin[hidden]{display:none}
+.ga-drop,.ga-yt{border:1px dashed var(--gold-b);border-radius:4px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.gal-admin.drag .ga-drop{background:rgba(220,194,150,.15)}
+.ga-h{font:400 26px/1.2 var(--display)}.ga-s,.ga-note{font-size:14px;color:var(--ink-2)}.ga-note{grid-column:1/-1}.ga-st{font-size:14px;color:var(--gold)}
+.ga-yt input{width:100%;height:44px;border:1px solid var(--line);border-radius:999px;padding:0 18px;font:400 14px var(--body);background:none;color:var(--ink)}
+@media (max-width:820px){.gal-admin{grid-template-columns:1fr}}
+.lb{position:fixed;inset:0;z-index:130;background:rgba(17,13,9,.94);display:grid;grid-template-columns:80px 1fr 80px;grid-template-rows:1fr auto;align-items:center;opacity:0;transition:opacity .3s}
+.lb.on{opacity:1}.lb[hidden]{display:none}
+.lb-stage{grid-column:2;display:grid;place-items:center;height:calc(100vh - 120px)}
+.lb-stage img,.lb-stage video{max-width:100%;max-height:100%;object-fit:contain}
+.lbyt{text-align:center;color:#f6efe5;display:grid;gap:20px;justify-items:center}
+.lb-n,.lb-x{background:none;border:1px solid rgba(246,239,229,.35);color:#f6efe5;border-radius:999px;cursor:pointer;font:400 14px var(--body)}
+.lb-n{width:52px;height:52px;justify-self:center}.lb-p{grid-column:1;grid-row:1}.lb-f{grid-column:3;grid-row:1}
+.lb-x{position:absolute;top:22px;right:22px;height:40px;padding:0 18px}
+.lb-cap{grid-column:2;color:#cbbfae;text-align:center;padding:0 0 28px;font-size:14px;min-height:20px}
+@media (max-width:620px){.lb{grid-template-columns:1fr 1fr}.lb-stage{grid-column:1/-1;grid-row:1}.lb-p,.lb-f{grid-row:2;margin-bottom:18px}.lb-p{grid-column:1}.lb-f{grid-column:2}.lb-cap{grid-column:1/-1;grid-row:3}}
+/* editor */
+#cmsBar{position:fixed;left:20px;bottom:20px;z-index:125;display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:999px;padding:6px;box-shadow:0 14px 40px -18px rgba(0,0,0,.6);font:400 13px var(--body);max-width:calc(100vw - 40px)}
+#cmsBar[hidden]{display:none}
+#cmsBar button{height:36px;padding:0 16px;border-radius:999px;border:0;cursor:pointer;font:500 13px var(--body)}
+#cmsBar .cb-main{background:var(--gold-l);color:var(--ink)}
+#cmsBar .cb-b{background:none;color:var(--paper);border:1px solid rgba(246,239,229,.3)}
+#cmsBar .cb-tip,#cmsBar .cb-b{display:none}
+#cmsBar.on .cb-tip{display:block;color:#cbbfae;max-width:420px;line-height:1.3}
+#cmsBar.on .cb-b{display:inline-block}
+#cmsBar .cb-st{color:var(--gold-l);padding-right:10px;white-space:nowrap}
+#cmsBar .cb-st:empty{display:none}
+@media (max-width:820px){#cmsBar.on .cb-tip{display:none}}
+body.cms-edit [data-cmsed]{outline:1px dashed rgba(139,115,73,.55);outline-offset:4px;cursor:text;border-radius:2px}
+body.cms-edit [data-cmsed]:hover{outline-color:var(--gold-b)}
+body.cms-edit [data-cmsed]:focus{outline:2px solid var(--gold-b);background:rgba(220,194,150,.12)}
+body.cms-edit .cursor{display:none!important}
+#cmsPill{position:fixed;z-index:126;height:34px;padding:0 16px;border:0;border-radius:999px;background:var(--ink);color:var(--paper);font:500 12px var(--body);cursor:pointer;box-shadow:0 10px 30px -12px rgba(0,0,0,.6)}
+#cmsPill[hidden]{display:none}
+.lbv{width:min(1200px,100%);aspect-ratio:16/9}.lbv iframe{width:100%;height:100%;border:0}
+.filmbox iframe{width:100%;height:100%;border:0;display:block}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="curtain" id="curtain" aria-hidden="true"><img src="logo-mark.svg" alt=""></div>
+
+<header class="hdr on-dark" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Sattva Weddings home"><img class="lm" src="logo-mark.svg" alt=""><img class="lw lw-d" src="logo-word.svg" alt=""><img class="lw lw-l" src="logo-word-light.svg" alt=""></a>
+    <nav aria-label="Main">
+      <div class="has-mega" id="megaWrap">
+        <button class="mega-btn" id="megaBtn" aria-expanded="false" aria-controls="mega">Destinations</button>
+        <div class="mega" id="mega"><div class="wrap" id="megaInner"></div></div>
+      </div>
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#plan">Plan my wedding</a>
+      <a href="#rsvp">RSVP</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#featured">Featured</a>
+    </nav>
+    <label class="sr" for="cur">Currency</label>
+    <select class="cur" id="cur"><option value="INR">₹ INR</option><option value="USD">$ USD</option><option value="GBP">£ GBP</option><option value="AED">AED</option><option value="CAD">C$ CAD</option></select>
+    <button class="menu-btn" id="menuOpen" aria-expanded="false" aria-controls="menu"><i></i>Menu</button>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="menu-btn close" id="menuClose">Close</button>
+  <img src="logo-word-light.svg" alt="Sattva Weddings" style="position:absolute;top:26px;left:6vw;height:30px">
+  <div class="links">
+    <a href="#home"><sup>01</sup>Home</a>
+    <a href="#destinations"><sup>02</sup>Destinations</a>
+    <a href="#properties"><sup>·</sup>Properties</a>
+    <a href="#services"><sup>03</sup>Services</a>
+    <a href="#plan"><sup>04</sup>Plan my wedding</a>
+    <a href="#rsvp"><sup>05</sup>Free RSVP</a>
+    <a href="#gallery"><sup>06</sup>Gallery</a>
+    <a href="#featured"><sup>07</sup>Featured</a>
+    <a href="#contact"><sup>08</sup>Contact</a>
+  </div>
+  <aside>
+    <p class="label">Studios</p>
+    <p style="font:400 26px/1.4 var(--display)">India · UAE · UK · USA · Canada</p>
+    <p class="label">WhatsApp</p>
+    <p><a class="wa-link" href="#" style="font:300 24px var(--display);text-decoration:none"></a></p>
+  </aside>
+  <label class="menu-cur" style="display:none;position:absolute;left:6vw;bottom:28px;color:#cbbfae;font-size:13px">Currency <select id="cur2" style="background:none;border:1px solid rgba(246,239,229,.4);color:#f6efe5;border-radius:999px;padding:6px 10px;margin-left:8px"><option value="INR">₹ INR</option><option value="USD">$ USD</option><option value="GBP">£ GBP</option><option value="AED">AED</option><option value="CAD">C$ CAD</option></select></label>
+</div>
+
+<main id="main">
+<!-- ===================== HOME ===================== -->
+<div class="view" data-view="home">
+  <section class="hero dark">
+    <div class="hero-bg" data-cms-bg="hero" aria-hidden="true"></div>
+    <canvas id="thread" aria-hidden="true"></canvas>
+    <figure class="hero-ph ph" id="heroPh" aria-hidden="true"></figure>
+    <div class="wrap">
+      <h1 class="split">Love, in its <em>truest</em> form.</h1>
+      <div class="meta reveal">
+        <div class="award">
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#e1c27f" stroke-width=".8"/><path d="M20 9l3 7.2 7.8.6-6 5 1.9 7.6L20 25.3l-6.7 4.1 1.9-7.6-6-5 7.8-.6z" fill="none" stroke="#e1c27f"/></svg>
+          <span>Best Concept &amp; Design<br>Apex Awards 2019</span>
+        </div>
+        <p class="lede">Luxury Indian weddings, designed in India and staged anywhere in the world. You bring the story. We carry everything else.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn" href="#plan"><span>Start planning</span></a>
+          <a class="btn line" href="#destinations"><span>Find your destination</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div id="marq"></div></div>
+
+  <section>
+    <div class="wrap split2">
+      <div><p class="label reveal">The Sattva way</p><h2 class="split" style="margin-top:22px">Ritual at heart. <em>Couture</em> in every detail.</h2></div>
+      <div class="reveal" style="display:grid;gap:26px;padding-top:12px">
+        <p class="lede">Sattva means the purest form of a thing. We plan weddings the same way: true to your families, generous to your guests, and exact in the details nobody should ever have to notice.</p>
+        <p class="lede">A palace phera for fifty or a beachfront celebration for a thousand. One team takes it from the first sketch to the final farewell.</p>
+        <a class="arrow" href="#services">See what we do <i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap mv">
+      <figure class="ph mv-ph reveal"><img src="img/mehendi-drapes.jpg" alt="Pink and marigold mehendi décor by Sattva Weddings" loading="lazy"></figure>
+      <div class="mv-grid">
+        <div class="reveal"><p class="label">Our promise</p><p class="lede" style="margin-top:16px">Effortless for you. Unforgettable for everyone you love. And a planning journey you will enjoy as much as the wedding.</p></div>
+        <div class="reveal"><p class="label">Our vision</p><p class="lede" style="margin-top:16px">To be the name the world calls first for an Indian wedding: bespoke, deeply rooted and impossible to forget.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="why">
+    <div class="wrap split2">
+      <div><p class="label">Why families choose us</p><h2 class="split" style="margin-top:22px">Four promises. <em>Never broken.</em></h2>
+        <figure class="ph reveal" style="margin-top:48px;aspect-ratio:1/1;border-radius:4px;overflow:hidden"><img src="img/favours.jpg" alt="Hand-tied wedding favours by Sattva Weddings" loading="lazy"></figure></div>
+      <ol class="promises">
+        <li class="reveal"><span>01</span><div><h3>Seasoned hands</h3><p>Every scale, every culture, every curveball. We have seen it all, so you only see the magic.</p></div></li>
+        <li class="reveal"><span>02</span><div><h3>Obsessive detail</h3><p>Every petal, every place card, every cue. Planned, rehearsed and checked twice.</p></div></li>
+        <li class="reveal"><span>03</span><div><h3>Partners on speed dial</h3><p>The finest decorators, chefs, artists and photographers in the trade, at rates you won't get on your own.</p></div></li>
+        <li class="reveal"><span>04</span><div><h3>Calm, by design</h3><p>One planner, one plan, one number to call. You arrive, and you celebrate.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap shead" style="margin-bottom:44px">
+      <div><p class="label">Our work</p><h2 class="split" style="margin-top:18px">Made by Sattva.</h2></div>
+      <a class="arrow" href="#gallery">See the gallery <i></i></a>
+    </div>
+    <div class="wrap work">
+      <figure class="ph reveal"><img src="img/aarti-blue.jpg" alt="Live aarti performance on a lit wedding stage" loading="lazy"><figcaption>Sangeet stage</figcaption></figure>
+      <figure class="ph reveal"><img src="img/marigold-arch.jpg" alt="Marigold and jasmine garland décor under a pink arch" loading="lazy"><figcaption>Marigold décor</figcaption></figure>
+      <figure class="ph reveal"><img src="img/mehendi-drapes.jpg" alt="Mehendi venue with pink drapes and marigold strings" loading="lazy"><figcaption>Mehendi</figcaption></figure>
+      <figure class="ph reveal"><img src="img/stage-night.jpg" alt="Night performance on a large wedding stage" loading="lazy"><figcaption>Production</figcaption></figure>
+      <figure class="ph reveal"><img src="img/favours.jpg" alt="Wedding favours wrapped in tulle" loading="lazy"><figcaption>Guest favours</figcaption></figure>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="paths">
+        <a class="path reveal" href="#destinations"><div class="ic" data-icon="globe"></div><span class="n">i.</span><h3>Find your place</h3><p>54 destinations. 257 venues. Rooms, event spaces and the month each one is at its best.</p><span class="arrow">Destinations <i></i></span></a>
+        <a class="path reveal" href="#plan"><div class="ic" data-icon="rupee"></div><span class="n">ii.</span><h3>Know your number</h3><p>Price your wedding function by function, with every rate in the open, in the currency you think in.</p><span class="arrow">Plan my wedding <i></i></span></a>
+        <a class="path reveal" href="#rsvp"><div class="ic" data-icon="invite"></div><span class="n">iii.</span><h3>Gather your people</h3><p>A free RSVP with personal codes, meal choices, flights and pickups. Any celebration, any size.</p><span class="arrow">Free RSVP <i></i></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap shead" style="margin-bottom:44px">
+      <div><p class="label">Most loved</p><h2 class="split" style="margin-top:18px">Where couples say yes.</h2></div>
+      <a class="arrow" href="#destinations">See all 54 <i></i></a>
+    </div>
+    <div class="rail" id="rail" aria-label="Featured destinations"></div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap shead">
+      <div><p class="label">Trending properties</p><h2 class="split" style="margin-top:18px">The venues everyone <em>wants right now</em>.</h2></div>
+      <a class="arrow" href="#properties">All 257 properties <i></i></a>
+    </div>
+    <div class="wrap" style="margin-bottom:30px"><div class="cats" id="trendCats"></div></div>
+    <div class="rail" id="trendRail" aria-label="Trending properties"></div>
+  </section>
+
+  <section class="dark" style="padding-bottom:110px">
+    <div class="wrap shead">
+      <div><p class="label">Global properties</p><h2 class="split" style="margin-top:18px">Beyond India, <em>without limits</em>.</h2><p class="lede" style="margin-top:18px">141 handpicked properties across the Gulf, South-East Asia, Turkey and Egypt, all planned by our studios in Dubai, London and New Jersey.</p></div>
+      <a class="btn line" href="#properties" data-scope="Global"><span>Explore global properties</span></a>
+    </div>
+    <div class="wrap" style="margin-bottom:30px"><div class="cats" id="globalCountries"></div></div>
+    <div class="rail" id="globalRail" aria-label="Global properties"></div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap split2" style="align-items:end">
+      <div>
+        <p class="label">Featured in WeddingSutra</p>
+        <p class="quote reveal" style="margin-top:28px">"We built a 100-foot reception stage at the end of a 200-foot entry passage."</p>
+        <cite class="label">Yash Mistry, on Jinal &amp; Siddharth's Vadodara wedding</cite>
+      </div>
+      <div class="reveal" style="display:grid;gap:22px;justify-items:start">
+        <p class="lede">Real weddings in the press, an editor's pick, and an award for concept and design.</p>
+        <a class="btn line" href="#featured"><span>Read the features</span></a>
+      </div>
+    </div>
+    <div class="wrap" style="margin-top:110px">
+      <p class="label" style="margin-bottom:6px">Our studios · local time</p>
+      <div class="studios" id="studios"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== DESTINATIONS ===================== -->
+<div class="view" data-view="destinations">
+  <div class="phead"><div class="wrap">
+    <p class="label">Wedding destinations</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">Fifty-four places to say <em>I do</em>.</h1>
+    <p class="lede">Rajasthan's palaces, Goa's beaches, Dubai's skyline, Bali's cliffs. Explore 257 venues, compare rooms and spaces, and shortlist the ones that stop your heart.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="tools-row">
+      <div class="tabs" role="group" aria-label="Region">
+        <button class="tab" data-reg="all" aria-pressed="true">All</button>
+        <button class="tab" data-reg="Rajasthan" aria-pressed="false">Rajasthan</button>
+        <button class="tab" data-reg="India" aria-pressed="false">Across India</button>
+        <button class="tab" data-reg="International" aria-pressed="false">International</button>
+      </div>
+      <label class="search"><span class="sr">Search destinations or venues</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="dSearch" placeholder="Search a city, country or hotel"></label>
+    </div>
+    <div class="dgrid" id="dGrid"></div>
+    <div id="vHits"></div>
+  </div>
+  <section style="padding-top:100px"></section>
+</div>
+
+<!-- ===================== PROPERTIES ===================== -->
+<div class="view" data-view="properties">
+  <div class="phead"><div class="wrap">
+    <p class="label">Wedding properties</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">257 properties. <em>One perfect fit.</em></h1>
+    <p class="lede">Palaces, forts, resorts, grand ballrooms and private estates, in India and beyond. Filter by style, compare rooms and capacity, and save the ones you love.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="tools-row" style="flex-direction:column;align-items:stretch;gap:16px">
+      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+        <div class="tabs" role="group" aria-label="Region"><button class="tab" data-scope="All" aria-pressed="true">All</button><button class="tab" data-scope="India" aria-pressed="false">India</button><button class="tab" data-scope="Global" aria-pressed="false">Global</button></div>
+        <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+          <label class="hint" style="display:flex;gap:8px;align-items:center">Guests staying <select id="pGuest" style="background:none;border:0;border-bottom:1px solid var(--ink);padding:4px"><option value="0">Any</option><option value="100">100+</option><option value="250">250+</option><option value="500">500+</option><option value="1000">1,000+</option></select></label>
+          <label class="hint" style="display:flex;gap:8px;align-items:center">Sort <select id="pSort" style="background:none;border:0;border-bottom:1px solid var(--ink);padding:4px"><option value="">Featured</option><option value="big">Largest first</option><option value="small">Most intimate</option><option value="az">A to Z</option></select></label>
+          <label class="search" style="min-width:220px"><span class="sr">Search properties</span><input id="pSearch" placeholder="Search a hotel or city"></label>
+        </div>
+      </div>
+      <div class="cats" id="propCats"></div>
+    </div>
+    <p class="hint" id="propCount" style="margin-bottom:26px"></p>
+    <div class="pgrid2" id="propGrid"></div>
+    <div class="more"><button class="btn line" id="propMore"><span>Show more properties</span></button></div>
+  </div>
+  <section style="padding-top:60px"></section>
+</div>
+
+<!-- ===================== DESTINATION ===================== -->
+<div class="view" data-view="dest"><div id="destPage"></div></div>
+<!-- ===================== VENUE ===================== -->
+<div class="view" data-view="venue"><div id="venuePage"></div></div>
+
+<!-- ===================== SERVICES ===================== -->
+<div class="view" data-view="services">
+  <div class="phead"><div class="wrap">
+    <p class="label">Services</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">Every detail. <em>One team.</em></h1>
+    <p class="lede">Take the full Sattva experience, or only the pieces you need. Open any service to see exactly what's included.</p>
+  </div></div>
+  <div class="wrap"><div class="svc" id="svc"></div></div>
+  <section style="padding-top:100px"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+    <h2 class="split" style="max-width:16ch">Know the number before you <em>fall in love</em>.</h2><a class="btn" href="#plan"><span>Price my wedding</span></a>
+  </div></section>
+</div>
+
+<!-- ===================== PLAN ===================== -->
+<div class="view" data-view="plan">
+  <div class="phead"><div class="wrap">
+    <p class="label">Plan my wedding · free</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">Your wedding, <em>priced</em> in minutes.</h1>
+    <p class="lede">Four quick steps. Every rate in the open. Like the number? We'll turn it into a detailed proposal within 24 hours, free.</p>
+  </div></div>
+  <div class="wrap planner">
+    <div>
+      <div class="steps" id="steps">
+        <button data-step="0" aria-current="step"><span>i.</span>The basics</button>
+        <button data-step="1"><span>ii.</span>Functions</button>
+        <button data-step="2"><span>iii.</span>Style</button>
+        <button data-step="3"><span>iv.</span>Your proposal</button>
+      </div>
+      <div class="step on" data-s="0">
+        <div class="fgrid">
+          <div class="field"><label for="pDest">Destination</label><select id="pDest"></select></div>
+          <div class="field"><label for="pMonth">Month</label><select id="pMonth"></select></div>
+        </div>
+        <div class="field"><label for="pGuests">Guests · <b class="num" id="pGuestsV"></b></label><input type="range" id="pGuests" min="20" max="1000" step="10"></div>
+        <div class="field"><label for="pStay">Guests needing a room · <b class="num" id="pStayV"></b></label><input type="range" id="pStay" min="0" max="100" step="5"><p class="hint">Two guests per room. For destination weddings this is usually 70 to 100 percent.</p></div>
+        <div class="fgrid">
+          <div class="field"><label for="pDays">Days of celebration</label><select id="pDays"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+          <div class="field"><label>Overall style</label><div class="seg" id="tierSeg"><button data-t="0">Elegant</button><button data-t="1">Luxe</button><button data-t="2">Royal</button></div></div>
+        </div>
+        <p class="hint" id="seasonHint"></p>
+      </div>
+      <div class="step" data-s="1">
+        <p class="hint">Which functions are you hosting?</p>
+        <div class="chips" id="fnChips"></div>
+        <p class="hint" style="margin-top:10px">Signature moments</p>
+        <div class="chips" id="addChips"></div>
+      </div>
+      <div class="step" data-s="2">
+        <p class="hint">Fine-tune the style for each part of the wedding.</p>
+        <div id="tierRows"></div>
+      </div>
+      <div class="step" data-s="3">
+        <form id="leadForm" novalidate style="display:grid;gap:26px">
+          <div class="fgrid">
+            <div class="field"><label for="lName">Your name</label><input id="lName" autocomplete="name"></div>
+            <div class="field"><label for="lPhone">WhatsApp number</label><input id="lPhone" type="tel" autocomplete="tel" placeholder="+91, +1, +44, +971"></div>
+            <div class="field"><label for="lEmail">Email</label><input id="lEmail" type="email" autocomplete="email"></div>
+            <div class="field"><label for="lFrom">Planning from</label><select id="lFrom"><option>India</option><option>USA</option><option>UK</option><option>UAE</option><option>Canada</option><option>Elsewhere</option></select></div>
+          </div>
+          <div class="field"><label for="lNote">Anything we should know</label><textarea id="lNote" placeholder="Dates, a venue you love, a feeling you want guests to leave with"></textarea></div>
+          <p class="err" id="lErr"></p>
+          <div><button class="btn" type="submit"><span>Send me my proposal</span></button></div>
+          <p class="hint">Includes a venue shortlist, vendor options and a free 30-minute call with a senior planner.</p>
+        </form>
+        <div id="leadDone" hidden></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:44px">
+        <button class="arrow" id="prevStep" style="flex-direction:row-reverse"><i style="transform:scaleX(-1)"></i>Back</button>
+        <button class="btn" id="nextStep"><span>Next</span></button>
+      </div>
+    </div>
+    <aside class="estimate" aria-live="polite">
+      <p class="label">Your estimate</p>
+      <div><div class="total num" id="tTotal"></div><small id="tSub"></small></div>
+      <div class="bars" id="tBars"></div>
+      <button class="arrow" id="seeRates" style="justify-self:start">See every rate <i></i></button>
+    </aside>
+  </div>
+  <div class="wrap rates" id="rates">
+    <p class="label">Rate card · <span id="rcDest"></span></p>
+    <div class="scroll-x" style="margin-top:20px"><table class="t num" id="rateCard"></table></div>
+    <p class="hint" style="margin-top:16px">Indicative 2026 rates. Final quotes depend on venue, date and vendor availability.</p>
+  </div>
+  <section style="padding-top:120px">
+    <div class="wrap split2">
+      <div>
+        <p class="label">Free planning timeline</p>
+        <h2 class="split" style="margin-top:18px">Your countdown, <em>month by month</em>.</h2>
+        <div class="field" style="margin-top:34px;max-width:280px"><label for="cDate">Your wedding date</label><input type="date" id="cDate"></div>
+      </div>
+      <div id="checklist" style="display:grid;gap:30px"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== RSVP ===================== -->
+<div class="view" data-view="rsvp">
+  <div class="phead"><div class="wrap">
+    <p class="label">Free RSVP · for any celebration</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">Every guest, <em>beautifully</em> handled.</h1>
+    <p class="lede">Personal invite codes, head counts per function, meals, flights, pickups and rooms. One calm dashboard, free for every host.</p>
+  </div></div>
+  <div class="wrap">
+    <div class="rtabs" role="tablist">
+      <button class="tab" role="tab" data-rt="host" aria-pressed="true">Your event</button>
+      <button class="tab" role="tab" data-rt="guests" aria-pressed="false">Guest list</button>
+      <button class="tab" role="tab" data-rt="dash" aria-pressed="false">Dashboard</button>
+      <button class="tab" role="tab" data-rt="guest" aria-pressed="false">I'm a guest</button>
+    </div>
+    <div class="rp on" data-rp="host">
+      <p class="hint" style="margin-bottom:26px">A sample event is loaded so you can see how it works. Edit anything, or start fresh.</p>
+      <div class="fgrid">
+        <div class="field"><label for="eCouple">Celebration</label><input id="eCouple"></div>
+        <div class="field"><label for="eHost">Hosted by</label><input id="eHost"></div>
+        <div class="field"><label for="eDeadline">RSVP by</label><input id="eDeadline" type="date"></div>
+        <div class="field"><label for="eHotel">Guest hotel</label><input id="eHotel"></div>
+        <div class="field"><label for="eHotelCode">Room block code</label><input id="eHotelCode"></div>
+        <div class="field"><label for="eHotelBy">Book rooms by</label><input id="eHotelBy" type="date"></div>
+      </div>
+      <div class="field" style="margin-top:26px"><label for="eNote">A note to guests</label><textarea id="eNote"></textarea></div>
+      <h3 style="margin:56px 0 10px">Functions</h3>
+      <div id="fnRows"></div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px">
+        <button class="btn" id="saveEvent"><span>Save event</span></button>
+        <button class="btn line" id="addFn"><span>Add a function</span></button>
+        <button class="arrow" id="newEvent">Start blank <i></i></button>
+      </div>
+    </div>
+    <div class="rp" data-rp="guests">
+      <div class="fgrid">
+        <div class="field"><label for="gName">Guest or family</label><input id="gName" placeholder="The Mehta family"></div>
+        <div class="field"><label for="gPhone">WhatsApp</label><input id="gPhone" type="tel"></div>
+        <div class="field"><label for="gSide">Side</label><select id="gSide"><option>Bride</option><option>Groom</option><option>Both</option></select></div>
+        <div class="field"><label for="gMax">Seats in party</label><input id="gMax" type="number" min="1" max="20" value="2"></div>
+      </div>
+      <p class="hint" style="margin:24px 0 10px">Invited to</p>
+      <div class="chips" id="gFns"></div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;align-items:center"><button class="btn" id="addGuest"><span>Add guest</span></button>
+        <details><summary class="arrow" style="cursor:pointer">Add many at once <i></i></summary>
+          <p class="hint" style="margin:12px 0">One per line: name, WhatsApp, side, seats</p>
+          <div class="field"><textarea id="bulk" placeholder="Rohan Shah, +447700900123, Groom, 2"></textarea></div>
+          <button class="btn line" id="addBulk" style="margin-top:12px"><span>Import</span></button>
+        </details>
+      </div>
+      <div class="scroll-x" style="margin-top:44px"><table class="t" id="gTable" style="min-width:820px"></table></div>
+    </div>
+    <div class="rp" data-rp="dash">
+      <div class="kpis" id="kpis"></div>
+      <div class="scroll-x"><table class="t num" id="fnTable" style="min-width:640px"></table></div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin:34px 0">
+        <button class="btn" id="copyCsv"><span>Copy guest list (CSV)</span></button>
+        <button class="btn line" id="copyPickups"><span>Copy pickup list</span></button>
+        <button class="btn line" id="remindAll"><span>Remind pending guests</span></button>
+      </div>
+      <div id="reminders"></div>
+    </div>
+    <div class="rp" data-rp="guest">
+      <div class="fgrid" style="align-items:end;max-width:640px">
+        <div class="field"><label for="codeIn">Your invite code</label><input id="codeIn" placeholder="SAT-4K2P" autocomplete="off"></div>
+        <div><button class="btn" id="codeGo"><span>Open my invitation</span></button></div>
+      </div>
+      <p class="err" id="codeErr" style="margin-top:12px"></p>
+      <div id="guestView"></div>
+    </div>
+    <p class="dev">This version keeps RSVPs in this browser so you can try every step. On the live site, connect the RSVP_ENDPOINT setting to your database so every guest's reply reaches one dashboard.</p>
+  </div>
+  <section style="padding-top:60px"></section>
+</div>
+
+<!-- ===================== FEATURED ===================== -->
+<div class="view" data-view="featured">
+  <div class="phead"><div class="wrap">
+    <p class="label">Featured</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">In the <em>spotlight</em>.</h1>
+    <p class="lede">Our weddings in print and online, an editor's pick, and an award for concept and design. Every link opens the original.</p>
+  </div></div>
+  <div class="wrap press">
+    <a class="lead-story reveal" href="https://weddingsutra.com/blog/extravagantly-decorated-with-blooms-and-whimsical-elements-this-couples-union-in-vadodara-was-spectacular" rel="noopener">
+      <div class="ph" id="leadPh"></div>
+      <p class="label">WeddingSutra · Real wedding · 30 August 2022</p>
+      <h2 style="font-size:clamp(32px,3.6vw,52px)">Extravagantly decorated with blooms and whimsical elements, this couple's union in Vadodara was spectacular</h2>
+      <p class="lede">Jinal and Siddharth's Gujarati wedding, with a bloom-led design, a showstopping baraat and bridal entry, and a 100-foot reception stage.</p>
+      <span class="arrow">Read the feature <i></i></span>
+    </a>
+    <div class="plist" id="plist"></div>
+  </div>
+  <section style="padding-top:120px">
+    <div class="wrap"><p class="label">From our portfolio</p><h2 class="split" style="margin:18px 0 44px">The work behind the features.</h2></div>
+    <div class="rail" id="workRail"></div>
+  </section>
+</div>
+
+<!-- ===================== CREDITS ===================== -->
+<div class="view" data-view="gallery">
+  <div class="phead"><div class="wrap">
+    <p class="label">Gallery</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">Every frame, <em>a feeling</em>.</h1>
+    <p class="lede">Photographs and films from Sattva weddings, from first haldi to the last dance.</p>
+  </div></div>
+  <section style="padding-top:0"><div class="wrap">
+    <div class="gal-admin" id="galAdmin" hidden>
+      <div class="ga-drop"><p class="label">Add to your gallery</p><p class="ga-h">Drop photos or videos here</p><p class="ga-s">JPG, PNG, WebP, MP4 or MOV, up to 20 MB each. Only you and your editors see this panel.</p>
+        <button type="button" class="btn" id="galChoose">Choose files</button> <span class="ga-st" id="galSt" aria-live="polite"></span></div>
+      <form class="ga-yt" id="galYtForm"><p class="label">Or add a YouTube film</p><input id="galYt" placeholder="Paste a YouTube link" aria-label="YouTube link" required><input id="galYtCap" placeholder="Caption (optional)" aria-label="Film caption"><button class="btn line" type="submit">Add film</button></form>
+      <p class="ga-note" id="galNote" hidden>Sample photos show until you add your own.</p>
+    </div>
+    <div class="cats gal-cats" id="galCats"></div>
+    <div class="gal" id="galGrid"></div>
+  </div></section>
+</div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Gallery viewer">
+  <button type="button" class="lb-x" id="lbClose" aria-label="Close">Close</button>
+  <button type="button" class="lb-n lb-p" id="lbPrev" aria-label="Previous">←</button>
+  <div class="lb-stage" id="lbStage"></div>
+  <button type="button" class="lb-n lb-f" id="lbNext" aria-label="Next">→</button>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<div class="view" data-view="credits">
+  <div class="phead"><div class="wrap">
+    <p class="label">Photo credits</p>
+    <h1 style="margin-top:22px;font-size:clamp(40px,5vw,72px)">With thanks.</h1>
+    <p class="lede" style="margin-top:24px">Wedding photographs are Sattva Weddings' own. Destination photographs are from Wikimedia Commons under free licences. Each link shows the photographer and licence.</p>
+  </div></div>
+  <div class="wrap"><div class="plist" id="creditList"></div></div>
+  <section style="padding-top:60px"></section>
+</div>
+
+<!-- ===================== CONTACT ===================== -->
+<div class="view" data-view="contact">
+  <div class="phead"><div class="wrap">
+    <p class="label">Contact</p>
+    <h1 class="split" style="margin-top:22px;font-size:clamp(46px,6.4vw,100px)">Start with <em>hello</em>.</h1>
+    <p class="lede" style="margin-top:24px">A senior planner replies within one working day, in your time zone.</p>
+  </div></div>
+  <div class="wrap split2">
+    <form id="enqForm" novalidate style="display:grid;gap:26px">
+      <div class="fgrid">
+        <div class="field"><label for="qName">Name</label><input id="qName" autocomplete="name"></div>
+        <div class="field"><label for="qPhone">WhatsApp</label><input id="qPhone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="qEmail">Email</label><input id="qEmail" type="email" autocomplete="email"></div>
+        <div class="field"><label for="qWhen">Wedding month</label><input id="qWhen" type="month"></div>
+      </div>
+      <div class="field"><label for="qMsg">Your story, in a line or two</label><textarea id="qMsg"></textarea></div>
+      <p class="err" id="qErr"></p>
+      <div><button class="btn" type="submit"><span>Send enquiry</span></button></div>
+    </form>
+    <div id="enqDone" hidden></div>
+    <div style="display:grid;gap:36px;align-content:start">
+      <div><p class="label">WhatsApp</p><p style="margin-top:10px"><a class="wa-link" href="#" style="font:300 28px var(--display);text-decoration:none"></a></p></div>
+      <div><p class="label">Email</p><p style="margin-top:10px"><a href="mailto:sattvaweddings@gmail.com" style="font:300 24px var(--display);text-decoration:none">sattvaweddings@gmail.com</a></p></div>
+      <div><p class="label">Follow</p><p style="margin-top:10px;display:flex;gap:22px"><a href="https://www.instagram.com/sattvaweddings/" rel="noopener">Instagram</a><a href="https://www.facebook.com/SattvaWeddings/" rel="noopener">Facebook</a></p></div>
+      <div><p class="label">Studios</p><div id="studioList" style="margin-top:10px"></div></div>
+    </div>
+  </div>
+  <section style="padding-top:60px"></section>
+</div>
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <a href="#contact" style="text-decoration:none"><p class="fbig">Let's write<br><em>your story.</em></p></a>
+    <div class="fcols">
+      <div><div style="display:flex;align-items:center;gap:16px;margin-bottom:26px"><img src="logo-mark.svg" alt="" style="width:64px;height:64px"><img src="logo-word-light.svg" alt="Sattva Weddings" style="height:40px"></div><p style="color:#cbbfae;max-width:40ch">Award-winning luxury wedding planners. Studios in India, the UAE, the UK, the USA and Canada.</p></div>
+      <div><a href="#destinations">Destinations</a><a href="#services">Services</a><a href="#plan">Plan my wedding</a><a href="#rsvp">Free RSVP</a><a href="#gallery">Gallery</a><a href="#featured">Featured</a><a href="#credits">Photo credits</a></div>
+      <div><a class="wa-link" href="#"></a><a href="mailto:sattvaweddings@gmail.com">sattvaweddings@gmail.com</a><a href="https://www.instagram.com/sattvaweddings/" rel="noopener">Instagram</a><a href="#contact">Send an enquiry</a><small style="display:block;margin-top:20px;color:#a39582">© <span id="yr"></span> Sattva Weddings</small></div>
+    </div>
+  </div>
+</footer>
+
+<button class="btn sl-btn" id="slBtn"><span id="slCount">Shortlist</span></button>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Your venue shortlist">
+  <header><h3>Your shortlist</h3><button class="mini" id="drawerClose">Close</button></header>
+  <div class="body" id="slBody"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="motifs.js"></script>
+<script>
+/* ============ CONFIG ============ */
+const CONFIG = {
+  whatsapp: "919624077377",
+  email: "sattvaweddings@gmail.com",
+  SHOW_VENUE_FILMS: true,             // venue films on each venue page
+  EMBED_VIDEO: !(window.claude || /claude|anthropic/i.test(location.hostname)), // auto: embeds YouTube in-page on your own domain; Claude-hosted pages block iframes
+  LEAD_ENDPOINT: "",                   // CRM / webhook URL for leads
+  RSVP_ENDPOINT: "",                   // backend URL for shared RSVPs
+  fx: {INR:1, USD:88, GBP:116, AED:24, CAD:63}  // INR per unit, approximate
+};
+const PHOTOS = { hero:null, press:null, venues:{},
+  destinations:{jaipur:["img/dest/jaipur-3.jpg","img/dest/jaipur.jpg","img/dest/jaipur-2.jpg"],udaipur:["img/dest/udaipur.jpg"],jodhpur:["img/dest/jodhpur.jpg"],jaisalmer:["img/dest/jaisalmer.jpg"],pushkar:["img/dest/pushkar.jpg"],goa:["img/dest/goa.jpg"],bekal:["img/dest/bekal.jpg"],kochi:["img/dest/kochi.jpg"],kovalam:["img/dest/kovalam.jpg"],gangtok:["img/dest/gangtok.jpg"],mahabalipuram:["img/dest/mahabalipuram.jpg"]}};
+const CREDITS={"jaipur-3.jpg":"Amber_Palace_on_Hill,_Amber,_Jaipur,_Rajasthan,_India.jpg","jaipur.jpg":"Hawa_Mahal_Sunset_View_Jaipur_Rajasthan.jpg","jaipur-2.jpg":"20191218_Amber_Fort_seen_from_Jaigarh_Fort_1617_9427.jpg","udaipur.jpg":"Gangaur_Ghat_on_the_Banks_of_Lake_pichola.jpg","jodhpur.jpg":"Jodhpur,_India,_Mehrangarh_Fort_on_the_hill.jpg","jaisalmer.jpg":"Jaisalmer_fort_and_palace_22.jpg","pushkar.jpg":"Pushkar,_India,_Pushkar_Lake_and_Ghats.jpg","goa.jpg":"Aguada_sunset.jpg","bekal.jpg":"Extension_of_Bekal_Fort_into_the_Arabian_Sea.jpg","kochi.jpg":"Chinese_Fishing_Nets_Cochin.jpg","kovalam.jpg":"Anantha_Padmanabha_swamy_Temple_and_it's_pond.jpg","gangtok.jpg":"Enchey_Monastery_-_Gangtok_-_Sikkim_-_India.jpg","mahabalipuram.jpg":"Mamallapuram,_Shore_Temple,_India.jpg"};
+
+/* ============ utils ============ */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const store={mem:{},get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):(this.mem[k]??d)}catch(e){return this.mem[k]??d}},set(k,v){this.mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let CUR = store.get("sv_cur","INR");
+function money(inr,compact=true){const v=inr/CONFIG.fx[CUR],sym={INR:"₹",USD:"$",GBP:"£",AED:"AED ",CAD:"C$"}[CUR];
+  if(CUR==="INR"&&compact){if(v>=1e7)return sym+(v/1e7).toFixed(2).replace(/\.?0+$/,"")+" Cr";if(v>=1e5)return sym+(v/1e5).toFixed(1).replace(/\.0$/,"")+" L";return sym+Math.round(v).toLocaleString("en-IN")}
+  if(compact&&v>=1e6)return sym+(v/1e6).toFixed(2).replace(/\.?0+$/,"")+"M";if(compact&&v>=1e4)return sym+Math.round(v/1e3)+"K";return sym+Math.round(v).toLocaleString(CUR==="INR"?"en-IN":"en-US")}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove("on"),2600)}
+async function copy(text,msg){try{await navigator.clipboard.writeText(text);toast(msg||"Copied")}catch(e){toast("Copy blocked here. Select the text below.");const ta=document.createElement("textarea");ta.value=text;ta.style.cssText="width:100%;min-height:140px";$("#reminders").prepend(ta);ta.select()}}
+const wa=(num,text)=>"https://wa.me/"+String(num||"").replace(/\D/g,"")+"?text="+encodeURIComponent(text);
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+async function postLead(kind,data){const a=store.get("sv_leads",[]);a.push({kind,at:new Date().toISOString(),...data});store.set("sv_leads",a);if(CONFIG.LEAD_ENDPOINT){try{await fetch(CONFIG.LEAD_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({kind,...data})})}catch(e){}}}
+const fmtNum=n=>n?Number(n).toLocaleString("en-IN"):"—";
+
+/* ============ motion icons ============ */
+const SV=i=>`<svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${i}</svg>`;
+const ICONS={
+ plan:SV(`<path class="d" pathLength="1" d="M5 3h10l4 4v14H5z"/><path class="d d2" pathLength="1" d="M8 11h8M8 14h8M8 17h5"/><g class="float"><path d="M15 3v4h4"/></g>`),
+ globe:SV(`<circle class="d" pathLength="1" cx="12" cy="12" r="9"/><g class="spin"><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g>`),
+ mandap:SV(`<path class="d" pathLength="1" d="M4 21V9l8-5 8 5v12"/><path class="d d2" pathLength="1" d="M7 21v-8a5 5 0 0 1 10 0v8"/><g class="pulse"><circle cx="12" cy="4" r=".8" fill="currentColor"/></g>`),
+ bell:SV(`<path class="d" pathLength="1" d="M3 20h18M5 20a7 7 0 0 1 14 0M12 13v-2"/><g class="float"><path d="M9 7l3-3 3 3"/></g>`),
+ thali:SV(`<ellipse class="d" pathLength="1" cx="12" cy="15" rx="9" ry="4"/><g class="float"><path d="M9 11c0-2 1-3 1-5M13 11c0-2 1-3 1-5"/></g>`),
+ music:SV(`<path class="d" pathLength="1" d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="16" r="2"/><g class="note"><path d="M4 8l1-1"/></g><g class="note b"><path d="M21 7l1-1"/></g>`),
+ camera:SV(`<rect class="d" pathLength="1" x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l2-3h4l2 3"/><circle class="d d2" pathLength="1" cx="12" cy="13" r="4"/><g class="blink"><circle cx="12" cy="13" r="9" stroke-width=".5"/></g>`),
+ baraat:SV(`<path class="d" pathLength="1" d="M4 20h16M7 20V10l5-4 5 4v10"/><g class="sway"><path d="M12 6V2M12 2l3 1.5-3 1.5"/></g>`),
+ lotus:SV(`<g class="pulse"><path d="M12 5c3 3 3 7 0 10-3-3-3-7 0-10z"/></g><path class="d" pathLength="1" d="M12 15c4-1 8 1 9 4-4 1-8-1-9-4zM12 15c-4-1-8 1-9 4 4 1 8-1 9-4z"/>`),
+ invite:SV(`<rect class="d" pathLength="1" x="3" y="6" width="18" height="13" rx="1.5"/><path class="d d2" pathLength="1" d="M3 7l9 6 9-6"/><g class="pulse"><circle cx="18" cy="6" r="2" fill="currentColor" stroke="none"/></g>`),
+ diya:SV(`<path class="d" pathLength="1" d="M4 15c2 4 14 4 16 0z"/><path d="M12 15v-2"/><g class="flame"><path d="M12 13c-2-2-1-4 0-6 1 2 2 4 0 6z" fill="currentColor" fill-opacity=".2"/></g>`),
+ rings:SV(`<circle class="d" pathLength="1" cx="9" cy="14" r="5"/><circle class="d d2" pathLength="1" cx="15" cy="14" r="5"/><g class="pulse"><path d="M15 6l1.5-2h-3z"/></g>`),
+ rupee:SV(`<circle class="d" pathLength="1" cx="12" cy="12" r="9"/><g class="float"><path d="M9 8h6M9 11h6M11 8c3 0 3 3 0 3h-2l5 5"/></g>`),
+};
+function paintIcons(root=document){$$("[data-icon]",root).forEach(el=>{if(!el.dataset.done){el.innerHTML=ICONS[el.dataset.icon]||"";el.dataset.done=1}})}
+
+/* ============ artwork placeholder (until photos) ============ */
+const HUE={palace:345,fort:20,resort:300,hotel:330,villa:15,heritage:30};
+function art(cv,seed=0,kind="arch"){
+  const r=cv.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2),w=cv.width=Math.max(300,r.width*dpr),h=cv.height=Math.max(300,r.height*dpr),x=cv.getContext("2d");
+  const hue=[345,20,300,330,15,30,350,280][seed%8];
+  const g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,`hsl(${hue} 32% 30%)`);g.addColorStop(1,`hsl(${(hue+25)%360} 40% 9%)`);x.fillStyle=g;x.fillRect(0,0,w,h);
+  const sun=x.createRadialGradient(w*.7,h*.28,4,w*.7,h*.28,w*.5);sun.addColorStop(0,"rgba(240,214,160,.55)");sun.addColorStop(1,"rgba(240,214,160,0)");x.fillStyle=sun;x.fillRect(0,0,w,h);
+  x.strokeStyle="rgba(225,194,127,.55)";x.lineWidth=Math.max(1,w/380);
+  const n=3+(seed%3);for(let i=0;i<n;i++){const cx=w*(i+.5)/n,rr=w/n*.34,base=h*.88,top=h*(.5-(i%2)*.06);x.beginPath();x.moveTo(cx-rr,base);x.lineTo(cx-rr,top);x.quadraticCurveTo(cx-rr,top-rr*1.3,cx,top-rr*1.7);x.quadraticCurveTo(cx+rr,top-rr*1.3,cx+rr,top);x.lineTo(cx+rr,base);x.stroke()}
+  x.fillStyle="rgba(23,18,13,.35)";x.fillRect(0,h*.88,w,h*.12);
+}
+function frame(el,src,alt,seed){if(src){el.innerHTML=`<img src="${esc(src)}" alt="${esc(alt||"")}" loading="lazy">`;return}el.innerHTML="";const c=document.createElement("canvas");el.appendChild(c);requestAnimationFrame(()=>art(c,seed))}
+
+function destVisual(el,d,i=0){const a=PHOTOS.destinations[d.s];const src=a&&(a[i]||a[0]);if(src){el.insertAdjacentHTML("afterbegin",`<img src="${esc(src)}" alt="${esc(d.n)}" loading="lazy">`);el.classList.add("has-photo");return}const c=document.createElement("canvas");c.setAttribute("aria-hidden","true");el.prepend(c);requestAnimationFrame(()=>drawMotif(c,MOTIF[d.s]||"europe",DESTS.indexOf(d)))}
+/* ============ hero thread: follows the cursor ============ */
+(function(){const cv=$("#thread"),x=cv.getContext("2d");let w,h,t=0,mx=.7,my=.55,tx=.7,ty=.55;const dpr=Math.min(devicePixelRatio||1,2);
+ function size(){w=cv.clientWidth;h=cv.clientHeight;cv.width=w*dpr;cv.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ cv.parentElement.addEventListener("pointermove",e=>{const r=cv.getBoundingClientRect();tx=(e.clientX-r.left)/r.width;ty=(e.clientY-r.top)/r.height});
+ function draw(){x.clearRect(0,0,w,h);mx+=(tx-mx)*.04;my+=(ty-my)*.04;
+  for(let s=0;s<4;s++){x.beginPath();const off=s*1.7;for(let px=-20;px<=w+20;px+=5){const k=px/w,pull=Math.exp(-Math.pow((k-mx)*3.2,2));const y=h*(.42+s*.045)+Math.sin(k*4.6+t*.5+off)*h*.08*Math.sin(k*Math.PI)+(my*h-h*(.42+s*.045))*pull*.55;px<0?x.moveTo(px,y):x.lineTo(px,y)}
+   const g=x.createLinearGradient(0,0,w,0);g.addColorStop(0,"rgba(225,194,127,0)");g.addColorStop(.5,["rgba(225,194,127,.9)","rgba(231,179,168,.5)","rgba(240,220,174,.45)","rgba(225,194,127,.3)"][s]);g.addColorStop(1,"rgba(225,194,127,0)");x.strokeStyle=g;x.lineWidth=s?0.8:1.4;x.stroke()}
+  x.beginPath();x.arc(mx*w,my*h,3,0,7);x.fillStyle="rgba(225,194,127,.9)";x.fill();
+  if(!REDUCE){t+=.01;requestAnimationFrame(draw)}}
+ size();addEventListener("resize",size);draw();})();
+
+/* ============ cursor, header, progress ============ */
+(function(){const c=$("#cursor");if(REDUCE)return;let x=innerWidth/2,y=innerHeight/2,cx=x,cy=y;
+ addEventListener("pointermove",e=>{x=e.clientX;y=e.clientY;if(!c.classList.contains("live")){cx=x;cy=y;c.classList.add("live")}});
+ (function loop(){cx+=(x-cx)*.2;cy+=(y-cy)*.2;c.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(loop)})();
+ document.addEventListener("pointerover",e=>{c.classList.toggle("big",!!e.target.closest("a,button,summary,.chip,label.search,.rcard,.dcard"))});
+ // magnetic buttons
+ document.addEventListener("pointermove",e=>{const b=e.target.closest(".btn");$$(".btn.mag").forEach(o=>{if(o!==b){o.style.transform="";o.classList.remove("mag")}});if(!b)return;const r=b.getBoundingClientRect();b.classList.add("mag");b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.18}px,${(e.clientY-r.top-r.height/2)*.28}px)`});
+})();
+let lastY=0;
+function onScroll(){const y=scrollY,hdr=$("#hdr"),max=document.documentElement.scrollHeight-innerHeight;
+ $("#progress").style.transform=`scaleX(${max>0?y/max:0})`;
+ const darkTop=VIEW==="home"&&y<innerHeight*.8;hdr.classList.toggle("on-dark",darkTop);hdr.classList.toggle("solid",!darkTop&&y>10||VIEW!=="home");
+ hdr.classList.toggle("hide",y>lastY&&y>400&&!document.body.classList.contains("menu-open"));lastY=y}
+addEventListener("scroll",onScroll,{passive:true});
+
+/* ============ reveal & split text ============ */
+function splitText(el){if(el.dataset.split)return;el.dataset.split=1;const walk=n=>{[...n.childNodes].forEach(ch=>{if(ch.nodeType===3){const frag=document.createDocumentFragment();ch.textContent.split(/(\s+)/).forEach(p=>{if(!p)return;if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(p));return}const w=document.createElement("span");w.className="w";const i=document.createElement("span");i.textContent=p;w.appendChild(i);frag.appendChild(w)});ch.replaceWith(frag)}else if(ch.nodeType===1&&!ch.classList.contains("w"))walk(ch)})};walk(el);
+ $$(".w>span",el).forEach((s,i)=>s.style.transitionDelay=(i*.06)+"s")}
+let io;
+function arm(root){paintIcons(root);if(REDUCE||!("IntersectionObserver" in window)){$$(".ic,.svc details,.path",root).forEach(e=>e.classList.add("in-view"));return}
+ document.documentElement.classList.add("js-motion");
+ io=io||new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove("pre");en.target.classList.add("in-view");io.unobserve(en.target)}}),{rootMargin:"0px 0px -6% 0px"});
+ $$(".split",root).forEach(splitText);
+ $$(".reveal,.split,.ic,.path,.svc details",root).forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight*.98){el.classList.remove("pre");el.classList.add("in-view");if(el.classList.contains("split")){el.classList.add("pre");requestAnimationFrame(()=>requestAnimationFrame(()=>el.classList.remove("pre")))}}else{el.classList.add("pre");io.observe(el)}})}
+
+/* ============ menu ============ */
+function setMenu(o){$("#menu").classList.toggle("open",o);document.body.classList.toggle("menu-open",o);$("#menuOpen").setAttribute("aria-expanded",o);if(o)$("#menuClose").focus()}
+$("#menuOpen").onclick=()=>setMenu(true);$("#menuClose").onclick=()=>setMenu(false);
+$$("#menu .links a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
+addEventListener("keydown",e=>{if(e.key==="Escape"){setMenu(false);openDrawer(false)}});
+
+/* ============ router with curtain ============ */
+let VIEW="home",first=true;
+function parse(){const h=decodeURIComponent(location.hash.slice(1))||"home";
+ if(/^rsvp-SAT-[A-Z0-9]{4}$/i.test(h))return{v:"rsvp",guest:h.slice(5).toUpperCase()};
+ if(h.startsWith("d-"))return{v:"dest",id:h.slice(2)};if(h.startsWith("v-"))return{v:"venue",id:h.slice(2)};
+ return{v:["home","destinations","properties","services","plan","rsvp","featured","gallery","contact","credits"].includes(h)?h:"home"}}
+function render(r){VIEW=r.v;$$(".view").forEach(v=>v.classList.toggle("on",v.dataset.view===r.v));
+ $$(".hdr nav a").forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")==="#"+r.v||(r.v==="venue")&&a.getAttribute("href")==="#properties"));$("#megaBtn").classList.toggle("cur-on",r.v==="dest"||r.v==="destinations");closeMega();
+ if(r.v==="dest")renderDest(r.id);if(r.v==="venue")renderVenue(r.id);if(r.v==="destinations")renderDGrid();if(r.v==="properties")renderProps(true);if(r.v==="plan")syncPlanner();if(r.v==="rsvp"){renderAll();if(r.guest){openRT("guest");$("#codeIn").value=r.guest;openGuest(r.guest)}}
+ const titles={properties:"Properties · Sattva Weddings",home:"Sattva Weddings",destinations:"Destinations · Sattva Weddings",services:"Services · Sattva Weddings",plan:"Plan my wedding · Sattva Weddings",rsvp:"Free RSVP · Sattva Weddings",featured:"Featured · Sattva Weddings",gallery:"Gallery · Sattva Weddings",contact:"Contact · Sattva Weddings"};
+ document.title=titles[r.v]||document.title;
+ scrollTo(0,0);onScroll();arm($(`.view[data-view="${r.v}"]`))}
+function route(){const r=parse();if(first||REDUCE){first=false;render(r);return}
+ const c=$("#curtain");c.className="curtain in";setTimeout(()=>{render(r);c.className="curtain out";setTimeout(()=>c.className="curtain",750)},560)}
+addEventListener("hashchange",route);
+
+/* ============ home ============ */
+const FEAT=["udaipur","jaipur","goa","uae","jodhpur","thailand","turkey","italy","kochi","bali"];
+$("#marq").innerHTML=[0,1].map(()=>DESTS.filter(d=>d.r!=="International"||d.v.length).slice(0,24).map(d=>`<span>${esc(d.n)}</span>`).join("")).join("");
+$("#rail").innerHTML=FEAT.map((s,i)=>{const d=DESTS.find(x=>x.s===s);return`<a class="rcard" href="#d-${d.s}"><div class="ph" data-art="${i}" data-dd="${d.s}"><span class="count">${d.v.length?d.v.length+(d.v.length===1?" venue":" venues"):"Bespoke shortlist"}</span></div><h3>${esc(d.n)}</h3><p>${esc(d.p)} · Best ${esc(d.season)}</p></a>`}).join("");
+$$("#rail .ph").forEach(el=>{const d=DESTS.find(x=>x.s===FEAT[+el.dataset.art]);destVisual(el,d)});
+(function(){const r=$("#rail");let down=false,sx=0,sl=0,moved=false;r.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse")return;down=true;moved=false;sx=e.clientX;sl=r.scrollLeft;r.classList.add("drag")});
+ addEventListener("pointermove",e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>4)moved=true;r.scrollLeft=sl-dx});addEventListener("pointerup",()=>{down=false;r.classList.remove("drag")});
+ r.addEventListener("click",e=>{if(moved){e.preventDefault();moved=false}},true)})();
+if(PHOTOS.hero)frame($("#heroPh"),PHOTOS.hero,"A Sattva wedding",0);else $("#heroPh").remove();
+const STUDIOS=[{c:"India",tz:"Asia/Kolkata",d:"Vadodara studio · Gujarat, Rajasthan and every Indian destination"},{c:"UAE",tz:"Asia/Dubai",d:"Dubai and the GCC"},{c:"UK",tz:"Europe/London",d:"UK estates and Europe"},{c:"USA",tz:"America/New_York",d:"US weddings and NRI couples"},{c:"Canada",tz:"America/Toronto",d:"Toronto, Vancouver, Banff"}];
+function clocks(){$("#studios").innerHTML=STUDIOS.map(s=>`<div class="studio"><span class="t num">${new Intl.DateTimeFormat("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:s.tz}).format(new Date())}</span><b>${esc(s.c)}</b><small>${esc(s.d)}</small></div>`).join("")}
+clocks();setInterval(clocks,30000);
+$("#studioList").innerHTML=STUDIOS.map(s=>`<p style="padding:14px 0;border-bottom:1px solid var(--line)"><b style="font:400 20px var(--display)">${esc(s.c)}</b><br><span class="hint">${esc(s.d)}</span></p>`).join("");
+
+/* ============ destinations index ============ */
+let REG="all";
+function renderDGrid(){const q=$("#dSearch").value.trim().toLowerCase();
+ const list=DESTS.filter(d=>(REG==="all"||d.r===REG)&&(!q||(d.n+" "+d.p).toLowerCase().includes(q)));
+ $("#dGrid").innerHTML=list.map((d,i)=>`<a class="dcard reveal" href="#d-${d.s}"><div class="ph" data-d="${d.s}"></div><div class="row"><h3>${esc(d.n)}</h3><small>${d.v.length?d.v.length+(d.v.length===1?" venue":" venues"):"On request"}</small></div><p>${esc(d.p)} · Best ${esc(d.season)}</p></a>`).join("")||`<p class="empty">No destination matches. Try a hotel name; matching venues appear below.</p>`;
+ $$("#dGrid .ph").forEach(el=>destVisual(el,DESTS.find(x=>x.s===el.dataset.d)));
+ const hits=q.length>2?DESTS.flatMap(d=>d.v.filter(v=>v[0].toLowerCase().includes(q)).map(v=>[d,v])):[];
+ $("#vHits").innerHTML=hits.length?`<h3 style="margin:80px 0 20px">Venues matching "${esc(q)}"</h3><div class="vlist">${hits.map(([d,v])=>vrow(d,v)).join("")}</div>`:"";
+ arm($("#dGrid"))}
+$$(".tools-row .tab").forEach(b=>b.onclick=()=>{REG=b.dataset.reg;$$(".tools-row .tab").forEach(x=>x.setAttribute("aria-pressed",x===b));renderDGrid()});
+$("#dSearch").addEventListener("input",renderDGrid);
+
+/* ============ shortlist ============ */
+let SL=store.get("sv_sl",[]);
+const heartSvg=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>`;
+function slKey(d,v){return d.s+"|"+v[0]}
+function vrow(d,v){const k=slKey(d,v),on=SL.includes(k),det=v[6];
+ return `<div class="vrow"><div><h4>${det?`<a href="#v-${det}" style="text-decoration:none">${esc(v[0])}</a>`:esc(v[0])}</h4><p class="note">${esc(v[4])}${v[5]?" · "+esc(v[5]):""}${d.n&&VIEW!=="dest"?" · "+esc(d.n):""}</p></div>
+ <div><span class="pill">${esc(v[1])}</span></div><div><span class="k">Rooms</span><span class="v num">${fmtNum(v[2])}</span></div><div><span class="k">Stays up to</span><span class="v num">${fmtNum(v[3])}</span></div>
+ <div class="act"><a class="mini" href="#v-${det}">View venue</a><button class="heart" data-sl="${esc(k)}" aria-pressed="${on}" aria-label="${on?"Remove from":"Add to"} shortlist: ${esc(v[0])}">${heartSvg}</button></div></div>`}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-sl]");if(!b)return;const k=b.dataset.sl;SL=SL.includes(k)?SL.filter(x=>x!==k):[...SL,k];store.set("sv_sl",SL);$$(`[data-sl="${CSS.escape(k)}"]`).forEach(x=>x.setAttribute("aria-pressed",SL.includes(k)));updSL();if(SL.includes(k))toast("Added to your shortlist")});
+function updSL(){$("#slBtn").classList.toggle("on",SL.length>0);$("#slCount").textContent=`Shortlist · ${SL.length}`;
+ $("#slBody").innerHTML=SL.length?SL.map(k=>{const[s,n]=k.split("|");const d=DESTS.find(x=>x.s===s);return`<div class="it"><span><b style="font:400 19px var(--display)">${esc(n)}</b><br><span class="hint">${esc(d?.n||"")}</span></span><button class="mini" data-sl="${esc(k)}">Remove</button></div>`}).join("")+`<a class="btn" style="margin-top:26px" href="${wa(CONFIG.whatsapp,"Hi Sattva, I'd like availability and quotes for:\n"+SL.map(k=>"• "+k.split("|")[1]+" ("+(DESTS.find(x=>x.s===k.split("|")[0])?.n||"")+")").join("\n"))}" rel="noopener"><span>Check availability on WhatsApp</span></a><p class="hint" style="margin-top:14px">We'll come back with availability and rates for your dates.</p>`:`<p class="empty">Tap the heart on any venue to save it here.</p>`}
+$("#slBtn").onclick=()=>openDrawer(true);$("#drawerClose").onclick=()=>openDrawer(false);$("#scrim").onclick=()=>openDrawer(false);
+function openDrawer(o){$("#drawer").classList.toggle("open",o);$("#scrim").classList.toggle("on",o)}
+updSL();
+
+/* ============ categories and property cards ============ */
+const CATS2=[["palace","Palaces"],["fort","Forts & heritage"],["resort","Resorts"],["hotel","City & ballroom hotels"],["villa","Villa estates"]];
+const catOf=v=>v[1]==="heritage"?"fort":v[1];
+const catLabel=c=>(CATS2.find(x=>x[0]===c)||[c,c])[1];
+function catChips(list,id){const cnt={};list.forEach(v=>{const c=catOf(v);cnt[c]=(cnt[c]||0)+1});return`<button class="cat-chip" data-cat="" aria-pressed="true">All <small>${list.length}</small></button>`+CATS2.filter(([c])=>cnt[c]).map(([c,l])=>`<button class="cat-chip" data-cat="${c}" aria-pressed="false">${l} <small>${cnt[c]}</small></button>`).join("")}
+const ALLV=DESTS.flatMap(d=>d.v.map(v=>({d,v})));
+function pcard({d,v}){const vd=VD[v[6]]||{};return`<a class="pcard reveal" href="#v-${v[6]}"><div class="ph" data-ds="${d.s}" data-i="${d.v.indexOf(v)%3}"><span class="tagc">${esc(catLabel(catOf(v)))}</span>${vd.yt&&CONFIG.SHOW_VENUE_FILMS?'<span class="film-dot" title="Has a venue film"></span>':""}</div><h3>${esc(v[0])}</h3><p>${esc(v[5]?v[5]+", "+d.n:d.n)} · ${esc(v[4])}</p><div class="meta num"><span><b>${fmtNum(v[2])}</b> rooms</span><span><b>${fmtNum(v[3])}</b> stay</span></div></a>`}
+let lazyIO;function paintCards(root){lazyIO=lazyIO||new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const el=en.target;lazyIO.unobserve(el);destVisual(el,DESTS.find(x=>x.s===el.dataset.ds),+el.dataset.i)}}),{rootMargin:"300px"});$$(".ph[data-ds]",root).forEach(el=>{if(!el.dataset.painted){el.dataset.painted=1;lazyIO.observe(el)}})}
+const TREND=["rambagh-palace","itc-mementos-udaipur","taj-lalit-bagh-udaipur","umaid-bhawan-palace","fairmont-jaipur","six-senses-fort-barwara","the-st-regis-goa-resort","raffles-udaipur","alila-fort-bishangarh","the-leela-palace-udaipur"];
+const GLOBAL=["emirates-palace-mandarin-oriental","ciragan-palace-kempinski","hilton-salwa-beach-resort-villas","vinpearl-nha-trang-bay","the-ritz-carlton-bali","banyan-tree-krabi","shangri-la-al-husn","raffles-al-areen-palace","titanic-mardan-palace","four-seasons-the-nam-hai"];
+const bySlug=s=>ALLV.find(x=>x.v[6]===s);
+function renderTrend(cat=""){const L=TREND.map(bySlug).filter(Boolean).filter(x=>!cat||catOf(x.v)===cat);$("#trendRail").innerHTML=L.map(pcard).join("");paintCards($("#trendRail"));arm($("#trendRail"))}
+$("#trendCats").innerHTML=catChips(TREND.map(bySlug).map(x=>x.v),"t");
+$("#trendCats").onclick=e=>{const b=e.target.closest(".cat-chip");if(!b)return;$$("#trendCats .cat-chip").forEach(x=>x.setAttribute("aria-pressed",x===b));renderTrend(b.dataset.cat)};
+renderTrend();
+const GDESTS=DESTS.filter(d=>d.r==="International"&&d.v.length);
+function renderGlobal(c=""){const L=c?ALLV.filter(x=>x.d.s===c).slice(0,10):GLOBAL.map(bySlug).filter(Boolean);$("#globalRail").innerHTML=L.map(pcard).join("");paintCards($("#globalRail"));arm($("#globalRail"))}
+$("#globalCountries").innerHTML=`<button class="cat-chip" data-c="" aria-pressed="true" style="color:inherit;border-color:rgba(246,239,229,.25)">Editor's picks</button>`+GDESTS.map(d=>`<button class="cat-chip" data-c="${d.s}" aria-pressed="false" style="color:inherit;border-color:rgba(246,239,229,.25)">${esc(d.n)} <small>${d.v.length}</small></button>`).join("");
+$("#globalCountries").onclick=e=>{const b=e.target.closest(".cat-chip");if(!b)return;$$("#globalCountries .cat-chip").forEach(x=>x.setAttribute("aria-pressed",x===b));renderGlobal(b.dataset.c)};
+renderGlobal();
+// properties directory
+let PSCOPE="All",PCAT="",PLIMIT=24;
+function renderProps(reset){if(reset)PLIMIT=24;const q=$("#pSearch").value.trim().toLowerCase(),g=+$("#pGuest").value,so=$("#pSort").value;
+ const base=ALLV.filter(x=>PSCOPE==="All"||(PSCOPE==="Global")===(x.d.r==="International"));
+ $("#propCats").innerHTML=catChips(base.map(x=>x.v)).replace(`data-cat="${PCAT}" aria-pressed="false"`,`data-cat="${PCAT}" aria-pressed="true"`).replace(PCAT?'data-cat="" aria-pressed="true"':'@@','data-cat="" aria-pressed="false"');
+ let L=base.filter(x=>(!PCAT||catOf(x.v)===PCAT)&&x.v[3]>=g&&(!q||(x.v[0]+" "+x.v[5]+" "+x.d.n+" "+x.d.p).toLowerCase().includes(q)));
+ if(so==="big")L.sort((a,b)=>b.v[3]-a.v[3]);if(so==="small")L.sort((a,b)=>(a.v[2]||999)-(b.v[2]||999));if(so==="az")L.sort((a,b)=>a.v[0].localeCompare(b.v[0]));
+ if(!so){const t=new Set([...TREND,...GLOBAL]);L.sort((a,b)=>(t.has(b.v[6])-t.has(a.v[6])))}
+ $("#propCount").textContent=`${L.length} ${L.length===1?"property":"properties"}${PCAT?" · "+catLabel(PCAT):""}${PSCOPE!=="All"?" · "+PSCOPE:""}`;
+ $("#propGrid").innerHTML=L.slice(0,PLIMIT).map(pcard).join("")||`<p class="empty">No properties match. Try another category or clear the search.</p>`;
+ $("#propMore").parentElement.style.display=L.length>PLIMIT?"flex":"none";paintCards($("#propGrid"));arm($("#propGrid"))}
+$$('[data-view="properties"] .tab').forEach(b=>b.onclick=()=>{PSCOPE=b.dataset.scope;PCAT="";$$('[data-view="properties"] .tab').forEach(x=>x.setAttribute("aria-pressed",x===b));renderProps(true)});
+$("#propCats").onclick=e=>{const b=e.target.closest(".cat-chip");if(!b)return;PCAT=b.dataset.cat;renderProps(true)};
+["pSearch","pGuest","pSort"].forEach(id=>$("#"+id).addEventListener("input",()=>renderProps(true)));
+$("#propMore").onclick=()=>{PLIMIT+=24;renderProps(false)};
+document.addEventListener("click",e=>{const a=e.target.closest('a[data-scope]');if(a){PSCOPE=a.dataset.scope;PCAT="";$$('[data-view="properties"] .tab').forEach(x=>x.setAttribute("aria-pressed",x.dataset.scope===PSCOPE))}});
+// mega menu
+function closeMega(){$("#megaWrap").classList.remove("open");$("#megaBtn").setAttribute("aria-expanded","false")}
+(function(){const grp=r=>DESTS.filter(d=>d.r===r);const li=d=>`<li><a href="#d-${d.s}">${esc(d.n)} <small>${d.v.length||""}</small></a></li>`;
+ const f=bySlug("rambagh-palace");
+ $("#megaInner").innerHTML=`<div class="c1"><h4>Rajasthan</h4><ul>${grp("Rajasthan").map(li).join("")}</ul></div><div><h4>Across India</h4><ul>${grp("India").map(li).join("")}</ul></div><div><h4>International</h4><ul>${grp("International").map(li).join("")}</ul></div><div><h4>Featured</h4><a class="feat" href="#v-rambagh-palace"><div class="ph" data-ds="jaipur" data-i="0"></div><b>Rambagh Palace</b><span class="hint">Jaipur · 10 event spaces</span></a><a class="arrow" href="#destinations" style="margin-top:18px">All destinations <i></i></a></div>`;
+ const w=$("#megaWrap"),b=$("#megaBtn");let t;
+ const open=()=>{clearTimeout(t);w.classList.add("open");b.setAttribute("aria-expanded","true");paintCards($("#mega"))};
+ b.onclick=()=>w.classList.contains("open")?closeMega():open();
+ if(matchMedia("(hover:hover)").matches){w.addEventListener("pointerenter",open);w.addEventListener("pointerleave",()=>{t=setTimeout(closeMega,180)})}
+ $("#mega").addEventListener("click",e=>{if(e.target.closest("a"))closeMega()});
+ addEventListener("keydown",e=>{if(e.key==="Escape")closeMega()})})();
+/* ============ destination page ============ */
+function renderDest(id){const d=DESTS.find(x=>x.s===id);if(!d){location.hash="#destinations";return}
+ const e=estimate({...P,dest:d.n,guests:150,stay:70,days:3,tier:0,funcs:{mehendi:true,sangeet:true,wedding:true},over:{},adds:{}});
+ const types=[...new Set(d.v.map(v=>v[1]))];const cities=[...new Set(d.v.map(v=>v[5]).filter(Boolean))];
+ $("#destPage").innerHTML=`<div class="phead"><div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="#destinations">Destinations</a><span>/</span><span>${esc(d.r)}</span></nav>
+  <div class="dhero"><div><p class="label">${esc(d.p)}</p><h1 class="split" style="margin-top:22px">${esc(d.n)}</h1><p class="lede" style="margin-top:26px">${esc(d.intro)}</p></div><div class="ph dhero-ph" id="dheroPh" data-d="${d.s}"></div></div>
+  <div class="facts"><div><small>Best season</small><b>${esc(d.season)}</b></div><div><small>Fly into</small><b style="font-size:18px">${esc(d.air)}</b></div><div><small>Venues</small><b class="num">${d.v.length||"Bespoke"}</b></div><div><small>From, 150 guests</small><b class="num">${money(e.low)}</b></div></div>
+ </div></div>
+ <div class="wrap">
+  ${d.v.length?`<div style="display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap"><h2 style="font-size:clamp(34px,4vw,56px)">The venues</h2><a class="btn line" href="#plan" data-plan="${esc(d.n)}"><span>Price a wedding here</span></a></div>
+  <div class="filters">
+   <div class="cats" id="fCats" style="width:100%">${catChips(d.v,"fcat")}</div>
+   ${cities.length>1?`<label>City <select id="fCity"><option value="">All</option>${cities.map(t=>`<option>${esc(t)}</option>`).join("")}</select></label>`:""}
+   <label>Guests staying <select id="fGuests"><option value="0">Any</option><option value="100">100+</option><option value="250">250+</option><option value="500">500+</option><option value="1000">1,000+</option></select></label>
+   <label>Sort <select id="fSort"><option value="">Our order</option><option value="rooms">Most rooms</option><option value="small">Most intimate</option><option value="az">A to Z</option></select></label>
+   <span class="hint" id="fCount" style="margin-left:auto"></span>
+  </div>
+  <div class="vlist" id="vlist"></div>`:`<div class="split2" style="padding:40px 0"><h2 style="font-size:clamp(34px,4vw,56px)">A shortlist made for your dates.</h2><div style="display:grid;gap:24px;justify-items:start"><p class="lede">We curate ${esc(d.n)} venues to your guest count, budget and season, with availability checked before you see them.</p><a class="btn" href="${wa(CONFIG.whatsapp,`Hi Sattva, please send me a venue shortlist for ${d.n}.`)}" rel="noopener"><span>Request the shortlist</span></a></div></div>`}
+ </div>
+ <section style="padding-top:110px"><div class="wrap" style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center"><a class="arrow" href="#destinations" style="flex-direction:row-reverse"><i style="transform:scaleX(-1)"></i>All destinations</a>${nextDest(d)}</div></section>`;
+ if(d.v.length){const f=()=>{let L=d.v.slice();const t=$("#fCats .cat-chip[aria-pressed=true]")?.dataset.cat||"",c=$("#fCity")?.value,g=+$("#fGuests").value,s=$("#fSort").value;
+   L=L.filter(v=>(!t||catOf(v)===t)&&(!c||v[5]===c)&&(v[3]>=g));if(s==="rooms")L.sort((a,b)=>b[2]-a[2]);if(s==="small")L.sort((a,b)=>(a[2]||999)-(b[2]||999));if(s==="az")L.sort((a,b)=>a[0].localeCompare(b[0]));
+   $("#vlist").innerHTML=L.map(v=>vrow(d,v)).join("")||`<p class="empty">No venues match these filters.</p>`;$("#fCount").textContent=`${L.length} of ${d.v.length} venue${d.v.length===1?"":"s"}`};
+  $$(".filters select").forEach(s=>s.onchange=f);$("#fCats").onclick=e=>{const b=e.target.closest(".cat-chip");if(!b)return;$$("#fCats .cat-chip").forEach(x=>x.setAttribute("aria-pressed",x===b));f()};f()}
+ destVisual($("#dheroPh"),d);if(PHOTOS.destinations[d.s])$("#dheroPh").insertAdjacentHTML("beforeend",`<figcaption>${esc(d.n)}</figcaption>`);
+ $$("[data-plan]",$("#destPage")).forEach(a=>a.onclick=()=>{P.dest=a.dataset.plan});}
+function nextDest(d){const i=DESTS.indexOf(d),n=DESTS[(i+1)%DESTS.length];return`<a class="arrow" href="#d-${n.s}">Next: ${esc(n.n)} <i></i></a>`}
+
+/* ============ venue page ============ */
+const tbl=(head,rows)=>`<div class="scroll-x"><table class="t num"><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr>${rows.map(r=>`<tr>${r.map((c,i)=>`<td>${esc(c)||"<span class='hint'>On request</span>"}</td>`).join("")}</tr>`).join("")}</table></div>`;
+function renderVenue(id){let d,v;for(const x of DESTS){const f=x.v.find(y=>y[6]===id);if(f){d=x;v=f;break}}
+ const pr=VD[id];if(!pr||!d){location.hash="#destinations";return}
+ const k=slKey(d,v),on=SL.includes(k);
+ const about=pr.about||`${v[0]} is ${/^[aeiou]/i.test(v[1])?"an":"a"} ${v[1]} in ${v[5]||d.n}${v[2]?` with ${fmtNum(v[2])} rooms and space for ${fmtNum(v[3])} guests to stay`:""}. ${v[4]}.${pr.air?` It is ${pr.air} from the airport`:""}${pr.rail?` and ${pr.rail} from the railway station`:""}${pr.air||pr.rail?".":""} Our planners can check dates, negotiate the room block and design every function here.`;
+ const tabs=[["about","Overview",1],["spaces","Event spaces",pr.venues.length],["rooms","Rooms and suites",pr.rooms.length],["dining","Dining",pr.dining.length],["fac","Good to know",(pr.fac||pr.inc||pr.pol)?1:0]].filter(t=>t[2]);
+ const photoList=PHOTOS.venues[id]||[];
+ $("#venuePage").innerHTML=`<div class="phead" style="padding-bottom:40px"><div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="#destinations">Destinations</a><span>/</span><a href="#d-${d.s}">${esc(d.n)}</a><span>/</span><span>${esc(v[0])}</span></nav>
+  <div class="vhero">
+   <div><p class="label">${esc(v[1])} · ${esc(v[5]||d.n)}</p><h1 class="split" style="margin-top:20px;font-size:clamp(40px,5.6vw,84px)">${esc(v[0])}</h1>
+    ${pr.addr?`<p class="hint" style="margin-top:18px">${esc(pr.addr)}</p>`:""}
+    <div class="vstats num"><div><b>${fmtNum(v[2])}</b><small>Rooms</small></div><div><b>${fmtNum(v[3])}</b><small>Guests staying</small></div><div><b>${pr.venues.length||"—"}</b><small>Event spaces</small></div><div><b>${esc(pr.air||"—")}</b><small>From airport</small></div></div>
+   </div>
+   <figure class="ph vhero-ph" id="vheroPh">${photoList[0]?"":`<figcaption>${PHOTOS.destinations[d.s]?esc(d.n)+" · venue photographs with your proposal":"Venue photographs with your proposal"}</figcaption>`}</figure>
+  </div>
+ </div></div>
+ <div class="wrap pgrid">
+  <div>
+   <div class="ptabs" role="tablist">${tabs.map((t,i)=>`<button role="tab" data-pt="${t[0]}" aria-selected="${i===0}">${t[1]}</button>`).join("")}</div>
+   <div class="tp on" data-tp="about"><p class="lede" style="max-width:62ch">${esc(about)}</p>
+    ${pr.tips&&pr.tips.length?`<h3 style="margin:44px 0 18px">Planner's notes</h3><ul class="ticks">${pr.tips.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`:""}
+    ${pr.yt&&CONFIG.SHOW_VENUE_FILMS?(CONFIG.EMBED_VIDEO?`<div class="filmbox"><iframe src="https://www.youtube-nocookie.com/embed/${esc(pr.yt)}?rel=0" title="${esc(v[0])} film" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`:`<a class="filmbox" id="filmbox" href="https://www.youtube.com/watch?v=${esc(pr.yt)}" rel="noopener"><span class="in"><span class="big-play" aria-hidden="true"></span><span class="label" style="color:#dcc296">Venue film</span><b>Watch ${esc(v[0])}</b></span></a>`):""}</div>
+   ${pr.venues.length?`<div class="tp" data-tp="spaces">${tbl(["Space","Type","Capacity","Area"],pr.venues)}</div>`:""}
+   ${pr.rooms.length?`<div class="tp" data-tp="rooms">${tbl(["Room","Size","Bed or sleeps","Count"],pr.rooms)}</div>`:""}
+   ${pr.dining.length?`<div class="tp" data-tp="dining">${tbl(["Restaurant","Cuisine"],pr.dining)}</div>`:""}
+   ${(pr.fac||pr.inc||pr.pol)?`<div class="tp" data-tp="fac"><div class="fac3">${pr.fac?`<div><h3>Facilities</h3><ul class="ticks">${pr.fac.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`:""}${pr.inc?`<div><h3>Included with rooms</h3><ul class="ticks">${pr.inc.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`:""}${pr.pol?`<div><h3>Policies</h3><ul class="ticks">${pr.pol.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`:""}</div></div>`:""}
+  </div>
+  <aside class="sticky-card">
+   <p class="label">At a glance</p>
+   <dl class="kv num"><dt>Rooms</dt><dd>${fmtNum(v[2])}</dd><dt>Guests staying</dt><dd>${fmtNum(v[3])}</dd>${pr.venues.length?`<dt>Event spaces</dt><dd>${pr.venues.length}</dd>`:""}${pr.built?`<dt>History</dt><dd>${esc(pr.built)}</dd>`:""}${pr.air?`<dt>Airport</dt><dd>${esc(pr.air)}</dd>`:""}${pr.rail?`<dt>Railway</dt><dd>${esc(pr.rail)}</dd>`:""}${pr.chk&&pr.chk!=="/"?`<dt>Check-in / out</dt><dd>${esc(pr.chk)}</dd>`:""}</dl>
+   <a class="btn" href="${wa(CONFIG.whatsapp,`Hi Sattva, please check dates and rates for ${v[0]}, ${d.n}.`)}" rel="noopener" style="justify-content:center"><span>Check dates and rates</span></a>
+   <button class="btn line" data-sl="${esc(k)}" aria-pressed="${on}" style="justify-content:center"><span>${on?"Saved to shortlist":"Save to shortlist"}</span></button>
+   <a class="arrow" href="https://www.google.com/maps/search/${encodeURIComponent(v[0]+" "+(v[5]||d.n))}" rel="noopener" style="justify-self:center">View on map <i></i></a>
+  </aside>
+ </div>
+ <section style="padding-top:110px"><div class="wrap"><div style="display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:20px"><h2 style="font-size:clamp(28px,3vw,42px)">More in ${esc(d.n)}</h2><a class="arrow" href="#d-${d.s}">All ${d.v.length} venues <i></i></a></div><div class="vlist">${d.v.filter(x=>x!==v).slice(0,5).map(x=>vrow(d,x)).join("")}</div></div></section>`;
+ if($("#filmbox")){const fb=$("#filmbox");const c=document.createElement("canvas");fb.prepend(c);const a=PHOTOS.destinations[d.s];if(a){c.remove();fb.insertAdjacentHTML("afterbegin",`<img src="${a[1]||a[0]}" alt="">`)}else requestAnimationFrame(()=>drawMotif(c,MOTIF[d.s]||"europe",3))}
+ const ph=$("#vheroPh");if(photoList[0])ph.insertAdjacentHTML("afterbegin",`<img src="${esc(photoList[0])}" alt="${esc(v[0])}">`);else destVisual(ph,d,(DESTS.indexOf(d)+d.v.indexOf(v))%3);
+ $$("#venuePage .ptabs button").forEach(b=>b.onclick=()=>{$$("#venuePage .ptabs button").forEach(x=>x.setAttribute("aria-selected",x===b));$$("#venuePage .tp").forEach(p=>p.classList.toggle("on",p.dataset.tp===b.dataset.pt))});}
+
+/* ============ services ============ */
+const SVCS=[
+ ["plan","Full wedding planning","From the first sketch to the farewell brunch.",["Concept and a design thesis for every function","Budget architecture and line-by-line tracking","Venue scouting, negotiation and contracts","Vendor sourcing, briefs and payment schedules","Muhurat-led timeline with your family priest","Weekly calls in your time zone"]],
+ ["globe","Destination weddings","Fifty-four places. One seamless team.",["Shortlist matched to season, budget and where guests fly from","Video walk-throughs for families abroad","Local permits, licences and legal-marriage guidance","Indian décor, florals, pandits and cuisine brought in where needed","An on-ground team that arrives before you"]],
+ ["mandap","Concept, décor and set design","The look your guests will talk about for years.",["Custom mandap, stage and entrance design","Floral concepts and installations","Light design and statement lighting","3D renders before anything is built","Reusable and low-waste décor options"]],
+ ["bell","Guest hospitality","Every guest met, roomed and quietly looked after.",["Hotel room blocks and rooming lists","Airport meet-and-greet and transfers","Welcome desks, kits and hampers","Itineraries sent on WhatsApp","Care for elderly guests and access needs"]],
+ ["thali","Catering and menus","From Gujarati thalis to global live counters.",["Tastings with shortlisted caterers","Jain, Swaminarayan, vegan and allergy-safe menus","Live counters and regional pop-ups","Bar and mocktail design","Surplus food donated after every event"]],
+ ["music","Entertainment and artists","From the first dhol beat to a playback legend.",["Sangeet choreography for families","DJs, live bands, Sufi and folk artists","Celebrity and playback singer bookings","Garba and dandiya nights with live musicians","Sound, stage and technical production"]],
+ ["camera","Photo, film and content","Your story, told in stills, film and reels.",["Candid photography and cinematic film","Same-day reels by a content creator","Drone coverage where permitted","Live stream for family abroad","Albums and a private guest gallery"]],
+ ["baraat","Baraat and grand entries","Arrivals that stop the room.",["Heritage horse, vintage car or a modern showstopper","Dhol, brass band and mobile sound","Bridal entries: phoolon ki chaadar, palanquin or choreographed","Cold pyro and confetti moments","Baraat route permits, including in the US and UK"]],
+ ["lotus","Bridal styling and beauty","A look for every moment.",["Makeup and hair for bride, groom and family","Mehendi artists for the bride and guests","Outfit planning by function and climate","Trials and on-the-day touch-ups"]],
+ ["invite","Invitations and guest website","The first impression, perfected.",["Printed and digital invitation suites","Free RSVP with per-function head counts","Guest website with schedule, dress codes and maps","Personalised hampers and room drops"]],
+ ["mandap","Cultural and fusion weddings","Indian, fusion and multicultural, done properly.",["Traditions respected and woven in, never rushed","Ceremonies for two cultures in one celebration","Officiants, pandits and readings coordinated","Guests from every side made to feel at home"]],
+ ["globe","Venue selection","The right venue, from palace to beach.",["Grand ballrooms, heritage estates and tropical beaches","Shortlists from our 257-venue guide","Site visits and video walk-throughs","Contracts and room blocks negotiated"]],
+ ["plan","Bespoke packages","Planning cut to your measure.",["Full, partial or day-of planning","Packages built to your budget","One planner as your single point of contact","Transparent rates from Plan my wedding"]],
+ ["diya","Wedding-day coordination","You planned it. We run it, flawlessly.",["We take over four to six weeks before","Minute-by-minute run sheet","Vendor call times and briefings","A coordinator at every function"]],
+ ["rings","Engagements and milestones","Every celebration around the big day.",["Roka, engagement and ring ceremonies","Pre-wedding shoots in our destinations","Bachelor and bachelorette trips","Anniversaries and vow renewals"]]];
+$("#svc").innerHTML=SVCS.map(([i,t,s,l])=>`<details><summary><span class="ic" data-icon="${i}"></span><span><h3>${esc(t)}</h3><p class="sub">${esc(s)}</p></span><span class="pm" aria-hidden="true">+</span></summary><div class="inner"><span></span><ul class="ticks">${l.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div></details>`).join("");
+
+/* ============ estimate engine ============ */
+const CATS={venue:{l:"Venue",u:"per function",r:[90000,220000,550000]},food:{l:"Catering",u:"per guest, per meal",r:[1400,2200,3600]},decor:{l:"Décor and florals",u:"per function",r:[120000,280000,700000]},photo:{l:"Photo and film",u:"per day",r:[90000,180000,380000]},ent:{l:"Entertainment",u:"per evening",r:[100000,350000,1200000]},beauty:{l:"Bridal and family styling",u:"per wedding",r:[100000,250000,500000]},rooms:{l:"Guest rooms",u:"per room, per night",r:[5000,9000,20000]},travel:{l:"Guest transfers",u:"per guest",r:[1500,3000,6000]},invite:{l:"Invitations and hampers",u:"per guest",r:[600,1800,4500]}};
+const FUNCS=[{id:"welcome",n:"Welcome dinner",eve:1},{id:"haldi",n:"Haldi",on:1},{id:"mehendi",n:"Mehendi",on:1},{id:"sangeet",n:"Sangeet",eve:1,on:1},{id:"wedding",n:"Wedding",on:1,big:1.6},{id:"reception",n:"Reception",eve:1,big:1.3},{id:"brunch",n:"Farewell brunch",lite:.5}];
+const ADDS=[{id:"baraat",n:"Grand baraat",v:[150000,400000,1000000]},{id:"artist",n:"Celebrity performer",v:[0,1500000,5000000]},{id:"mehendiArt",n:"Mehendi artists for guests",v:[40000,80000,150000]},{id:"pyro",n:"Cold pyro or drone show",v:[80000,300000,900000]},{id:"creator",n:"Same-day reels",v:[60000,120000,250000]},{id:"stream",n:"Live stream",v:[40000,90000,180000]},{id:"concierge",n:"Guest concierge desk",v:[60000,150000,350000]},{id:"green",n:"Low-waste décor",v:[25000,50000,90000]}];
+let P={dest:"Udaipur",month:11,guests:200,stay:60,days:3,tier:1,funcs:Object.fromEntries(FUNCS.map(f=>[f.id,!!f.on])),over:{},adds:{baraat:true}};
+const best=d=>{const m=d.season.match(/[A-Z][a-z]{2}/g)||[];return m};
+function estimate(p){const d=DESTS.find(x=>x.n===p.dest)||DESTS[0],tierOf=k=>p.over[k]??p.tier,rate=k=>CATS[k].r[tierOf(k)]*d.m;
+ const fns=FUNCS.filter(f=>p.funcs[f.id]),nF=fns.length||1,weight=fns.reduce((a,f)=>a+(f.big||f.lite||1),0)||1,eve=fns.filter(f=>f.eve).length,roomsN=Math.ceil(p.guests*p.stay/200)*Math.max(1,p.days-1);
+ const L={venue:rate("venue")*weight,food:rate("food")*p.guests*fns.reduce((a,f)=>a+(f.lite||1),0)*.9,decor:rate("decor")*weight,photo:rate("photo")*Math.min(p.days,nF),ent:rate("ent")*Math.max(eve,1),beauty:rate("beauty")*(.7+.1*nF),rooms:CATS.rooms.r[tierOf("rooms")]*Math.max(1,(d.m+1)/2)*roomsN,travel:rate("travel")*p.guests*p.stay/100,invite:CATS.invite.r[tierOf("invite")]*p.guests};
+ ADDS.forEach(a=>{if(p.adds[a.id])L["add_"+a.id]=a.v[p.tier]*(a.id==="artist"?1:d.m)});
+ const base=Object.values(L).reduce((a,b)=>a+b,0);L.plan=base*[.08,.1,.12][p.tier]+(d.r==="International"?450000*d.m/2:0);
+ const total=base+L.plan;return{L,total,low:total*.88,high:total*1.15,per:total/p.guests,d}}
+
+/* ============ planner UI ============ */
+$("#pDest").innerHTML=["Rajasthan","India","International"].map(r=>`<optgroup label="${r==="India"?"Across India":r}">${DESTS.filter(d=>d.r===r).map(d=>`<option>${esc(d.n)}</option>`).join("")}</optgroup>`).join("");
+$("#pMonth").innerHTML=MONTHS.map((m,i)=>`<option value="${i}">${m}</option>`).join("");
+$("#fnChips").innerHTML=FUNCS.map(f=>`<label class="chip"><input type="checkbox" data-fn="${f.id}">${esc(f.n)}</label>`).join("");
+$("#addChips").innerHTML=ADDS.map(a=>`<label class="chip"><input type="checkbox" data-add="${a.id}">${esc(a.n)}</label>`).join("");
+$("#tierRows").innerHTML=Object.entries(CATS).map(([k,c])=>`<div class="trow"><span>${esc(c.l)}<br><span class="hint">${esc(c.u)}</span></span><span class="seg" data-cat="${k}">${["Elegant","Luxe","Royal"].map((t,i)=>`<button type="button" data-t="${i}">${t}</button>`).join("")}</span></div>`).join("");
+let step=0;
+function goStep(n){step=Math.max(0,Math.min(3,n));$$(".step").forEach(s=>s.classList.toggle("on",+s.dataset.s===step));$$("#steps button").forEach(b=>{const i=+b.dataset.step;b.toggleAttribute("aria-current",i===step);if(i===step)b.setAttribute("aria-current","step");b.classList.toggle("done",i<step)});$("#nextStep").style.visibility=step===3?"hidden":"visible";$("#prevStep").style.visibility=step===0?"hidden":"visible"}
+$$("#steps button").forEach(b=>b.onclick=()=>goStep(+b.dataset.step));$("#prevStep").onclick=()=>goStep(step-1);$("#nextStep").onclick=()=>goStep(step+1);
+$("#seeRates").onclick=()=>$("#rates").scrollIntoView({behavior:"smooth"});
+function syncPlanner(){$("#pDest").value=P.dest;$("#pMonth").value=P.month;$("#pGuests").value=P.guests;$("#pStay").value=P.stay;$("#pDays").value=P.days;
+ $$("#tierSeg button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.t===P.tier));
+ $$("[data-fn]").forEach(c=>c.checked=!!P.funcs[c.dataset.fn]);$$("[data-add]").forEach(c=>c.checked=!!P.adds[c.dataset.add]);
+ $$(".seg[data-cat]").forEach(s=>{const t=P.over[s.dataset.cat]??P.tier;$$("button",s).forEach(b=>b.setAttribute("aria-pressed",+b.dataset.t===t))});renderEstimate();goStep(step)}
+function renderEstimate(){const e=estimate(P);$("#pGuestsV").textContent=P.guests;$("#pStayV").textContent=P.stay+"%";
+ const mon=MONTHS[P.month].slice(0,3),ok=seasonHas(e.d.season,P.month);
+ $("#seasonHint").innerHTML=ok?`${MONTHS[P.month]} is a good month for ${esc(e.d.n)}.`:`${MONTHS[P.month]} is outside ${esc(e.d.n)}'s best season (${esc(e.d.season)}). Rates are lower, but weather is a risk.`;
+ $("#tTotal").textContent=`${money(e.low)} – ${money(e.high)}`;
+ $("#tSub").textContent=`About ${money(e.per,false)} per guest · ${e.d.n} · ${P.guests} guests · ${Object.values(P.funcs).filter(Boolean).length} functions`;
+ const names={...Object.fromEntries(Object.entries(CATS).map(([k,c])=>[k,c.l])),plan:"Planning and on-ground team"};ADDS.forEach(a=>names["add_"+a.id]=a.n);
+ const rows=Object.entries(e.L).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]),max=rows[0]?.[1]||1;
+ $("#tBars").innerHTML=rows.slice(0,8).map(([k,v])=>`<div class="bar"><span>${esc(names[k])}</span><span class="v num">${money(v)}</span><i><b style="width:${Math.max(3,v/max*100)}%"></b></i></div>`).join("")+(rows.length>8?`<p class="hint" style="color:#cbbfae">+ ${rows.length-8} smaller items</p>`:"");
+ $("#rcDest").textContent=e.d.n;
+ $("#rateCard").innerHTML=`<tr><th>Item</th><th>Unit</th><th>Elegant</th><th>Luxe</th><th>Royal</th></tr>`+Object.entries(CATS).map(([k,c])=>{const t=P.over[k]??P.tier,m=k==="rooms"?Math.max(1,(e.d.m+1)/2):k==="invite"?1:e.d.m;return`<tr><td>${esc(c.l)}</td><td class="hint">${esc(c.u)}</td>${c.r.map((r,i)=>`<td style="${i===t?"color:var(--gold);font-weight:500":""}">${money(r*m,false)}</td>`).join("")}</tr>`}).join("")}
+const MI={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+function seasonHas(s,m){return s.split(",").some(part=>{const p=part.match(/[A-Z][a-z]{2}/g);if(!p)return false;const a=MI[p[0]],b=MI[p[p.length-1]];return a<=b?m>=a&&m<=b:m>=a||m<=b})}
+["pDest","pMonth","pGuests","pStay","pDays"].forEach(id=>$("#"+id).addEventListener("input",e=>{const k={pDest:"dest",pMonth:"month",pGuests:"guests",pStay:"stay",pDays:"days"}[id];P[k]=k==="dest"?e.target.value:+e.target.value;renderEstimate()}));
+$$("#tierSeg button").forEach(b=>b.onclick=()=>{P.tier=+b.dataset.t;P.over={};syncPlanner()});
+$("#fnChips").onchange=e=>{P.funcs[e.target.dataset.fn]=e.target.checked;renderEstimate()};
+$("#addChips").onchange=e=>{P.adds[e.target.dataset.add]=e.target.checked;renderEstimate()};
+$("#tierRows").onclick=e=>{const b=e.target.closest("button[data-t]");if(!b)return;P.over[b.parentElement.dataset.cat]=+b.dataset.t;syncPlanner()};
+$("#leadForm").addEventListener("submit",async e=>{e.preventDefault();const n=$("#lName").value.trim(),ph=$("#lPhone").value.trim(),em=$("#lEmail").value.trim();
+ if(!n||ph.replace(/\D/g,"").length<8||!/^\S+@\S+\.\S+$/.test(em)){$("#lErr").textContent="Please add your name, a WhatsApp number with country code and a valid email.";return}$("#lErr").textContent="";
+ const es=estimate(P),fns=FUNCS.filter(f=>P.funcs[f.id]).map(f=>f.n).join(", ");
+ const msg=`Plan my wedding\nName: ${n}\nFrom: ${$("#lFrom").value}\nPhone: ${ph}\nEmail: ${em}\nDestination: ${P.dest}, ${MONTHS[P.month]}\nGuests: ${P.guests} (${P.stay}% staying), ${P.days} days\nFunctions: ${fns}\nStyle: ${["Elegant","Luxe","Royal"][P.tier]}\nEstimate: ${money(es.low)} – ${money(es.high)}\nShortlist: ${SL.map(k=>k.split("|")[1]).join(", ")||"—"}\nNote: ${$("#lNote").value.trim()||"—"}`;
+ await postLead("planner",{name:n,phone:ph,email:em,plan:P,estimate:{low:es.low,high:es.high},shortlist:SL});
+ $("#leadForm").hidden=true;$("#leadDone").hidden=false;$("#leadDone").innerHTML=`<div class="ok"><b>Thank you, ${esc(n.split(" ")[0])}.</b><p class="lede">A senior planner will send your itemised proposal within 24 hours. To skip the queue, send your plan on WhatsApp now.</p><a class="btn" style="margin-top:22px" href="${wa(CONFIG.whatsapp,msg)}" rel="noopener"><span>Send on WhatsApp</span></a></div>`});
+
+/* ============ timeline ============ */
+const PLAN=[[18,"18 months or more",["Set the budget and who's contributing","Choose destination and season","Book your planner"]],[12,"12 months",["Book the venue","Fix the muhurat","Book photographer and decorator","Build your guest list and free RSVP"]],[9,"9 months",["Send save-the-dates with hotel details","Book entertainment and choreographer","Begin outfit design"]],[6,"6 months",["Menu tastings","Book makeup and mehendi","Plan guest transfers and hampers","Check passports and visas"]],[3,"3 months",["Send invitations and open RSVPs","Approve décor renders","Sangeet rehearsals"]],[1,"1 month",["Chase pending RSVPs","Send rooming and pickup lists","Final fittings","Approve the run sheet"]],[0,"Wedding week",["Welcome desk opens","Vendor call times confirmed","Hand the day to your planner"]]];
+function renderChecklist(){const v=$("#cDate").value,done=store.get("sv_check",{}),wd=v?new Date(v+"T00:00"):null,now=new Date();
+ $("#checklist").innerHTML=PLAN.map(([m,lab,items])=>{let when="",late=false;if(wd){const d=new Date(wd);d.setMonth(d.getMonth()-m);when=d.toLocaleDateString("en-GB",{month:"long",year:"numeric"});late=d<now}
+  return`<div style="border-top:1px solid var(--line);padding-top:18px"><p class="label" style="margin-bottom:12px">${esc(lab)}${when?" · by "+when:""}</p>${items.map((it,i)=>{const k=m+"-"+i,od=late&&!done[k];return`<label style="display:flex;gap:12px;align-items:center;padding:6px 0;${od?"color:#9a3b2c":""}"><input type="checkbox" data-ck="${k}" ${done[k]?"checked":""}><span style="${done[k]?"text-decoration:line-through;opacity:.5":""}">${esc(it)}${od?" · overdue":""}</span></label>`}).join("")}</div>`}).join("")}
+$("#cDate").oninput=()=>{store.set("sv_cdate",$("#cDate").value);renderChecklist()};
+$("#checklist").onchange=e=>{const d=store.get("sv_check",{});d[e.target.dataset.ck]=e.target.checked;store.set("sv_check",d);renderChecklist()};
+
+/* ============ RSVP ============ */
+const uid=()=>Math.random().toString(36).slice(2,8),code=()=>"SAT-"+Math.random().toString(36).slice(2,6).toUpperCase().padEnd(4,"X");
+function sampleEvent(){const d=new Date();d.setMonth(d.getMonth()+4);const day=n=>{const x=new Date(d);x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
+ const ev={couple:"Aanya & Kabir",host:"The Desai and Malhotra families",deadline:day(-30),hotel:"Taj Fateh Prakash Palace, Udaipur",hotelCode:"AANYAKABIR",hotelBy:day(-45),note:"We can't wait to celebrate with you by the lake.",
+  fns:[{id:"f1",n:"Mehendi",date:day(0),time:"16:00",venue:"Palace courtyard, Udaipur",dress:"Shades of rose"},{id:"f2",n:"Sangeet",date:day(0),time:"20:00",venue:"Lakeside terrace",dress:"Glam Indo-western"},{id:"f3",n:"Wedding",date:day(1),time:"18:30",venue:"Durbar Hall",dress:"Ivory and gold"}],guests:[]};
+ const g=(n,ph,side,max,r)=>({id:uid(),code:code(),name:n,phone:ph,side,max,fns:["f1","f2","f3"],rsvp:r||null});
+ ev.guests=[g("Rohan & Meera Shah","+447700900123","Groom",2,{status:"yes",count:{f1:2,f2:2,f3:2},meal:"Vegetarian",diet:"",arr:day(-1)+"T10:20",flight:"EK 568",pickup:true,room:true,song:"Kesariya",msg:"Can't wait!"}),g("Priya Iyer","+971501234567","Bride",3,{status:"yes",count:{f1:3,f2:3,f3:3},meal:"Jain",diet:"No onion or garlic",arr:day(-1)+"T14:05",flight:"6E 1421",pickup:true,room:true,song:"",msg:""}),g("The Patel family","+12015550143","Bride",4,null),g("Arjun Mehta","+16475550188","Groom",1,{status:"no",count:{},msg:"Sending love from Toronto."})];return ev}
+let EV=store.get("sv_event2",null)||sampleEvent();const saveEv=()=>store.set("sv_event2",EV);
+const fmtDate=s=>s?new Date(s+"T00:00").toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"}):"date to be confirmed";
+function openRT(t){$$(".rtabs .tab").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rt===t));$$(".rp").forEach(p=>p.classList.toggle("on",p.dataset.rp===t));if(t==="dash")renderDash()}
+$$(".rtabs .tab").forEach(b=>b.onclick=()=>openRT(b.dataset.rt));
+function renderHost(){["couple","host","deadline","hotel","hotelCode","hotelBy","note"].forEach(k=>$("#e"+k[0].toUpperCase()+k.slice(1)).value=EV[k]||"");
+ $("#fnRows").innerHTML=EV.fns.map((f,i)=>`<div class="fnrow" data-i="${i}">${[["n","Function","text"],["date","Date","date"],["time","Time","time"],["venue","Venue","text"],["dress","Dress code","text"]].map(([k,l,t])=>`<div class="field"><label for="fn${i}${k}">${l}</label><input id="fn${i}${k}" type="${t}" data-k="${k}" value="${esc(f[k])}"></div>`).join("")}<button class="mini" data-del="${i}">Remove</button></div>`).join("")}
+$("#fnRows").oninput=e=>{const r=e.target.closest(".fnrow");if(r)EV.fns[+r.dataset.i][e.target.dataset.k]=e.target.value};
+$("#fnRows").onclick=e=>{const b=e.target.closest("[data-del]");if(!b)return;const f=EV.fns.splice(+b.dataset.del,1)[0];EV.guests.forEach(g=>g.fns=g.fns.filter(x=>x!==f.id));saveEv();renderAll()};
+$("#addFn").onclick=()=>{EV.fns.push({id:"f"+uid(),n:"New function",date:"",time:"19:00",venue:"",dress:""});renderHost()};
+$("#saveEvent").onclick=()=>{["couple","host","deadline","hotel","hotelCode","hotelBy","note"].forEach(k=>EV[k]=$("#e"+k[0].toUpperCase()+k.slice(1)).value.trim());if(!EV.couple)EV.couple="Our celebration";saveEv();renderAll();toast("Event saved")};
+$("#newEvent").onclick=()=>{EV={couple:"",host:"",deadline:"",hotel:"",hotelCode:"",hotelBy:"",note:"",fns:[{id:"f1",n:"Wedding",date:"",time:"18:00",venue:"",dress:""}],guests:[]};saveEv();renderAll();$("#eCouple").focus()};
+function inviteText(g){const l=EV.fns.filter(f=>g.fns.includes(f.id)).map(f=>`• ${f.n}: ${fmtDate(f.date)} ${f.time||""}`).join("\n");return`Dear ${g.name},\n\nWith joy, ${EV.host||"we"} invite you to celebrate ${EV.couple}.\n\n${l}\n\nPlease RSVP${EV.deadline?" by "+fmtDate(EV.deadline):""} on the Sattva Weddings RSVP page with your code ${g.code}.${EV.hotel?"\n\nStay: "+EV.hotel+(EV.hotelCode?", code "+EV.hotelCode:""):""}`}
+const stPill=g=>!g.rsvp?`<span class="st wait">Awaiting</span>`:g.rsvp.status==="yes"?`<span class="st yes">Attending</span>`:`<span class="st no">Declined</span>`;
+function renderGuests(){$("#gFns").innerHTML=EV.fns.map(f=>`<label class="chip"><input type="checkbox" data-gf="${f.id}" checked>${esc(f.n)}</label>`).join("");
+ $("#gTable").innerHTML=`<tr><th>Guest</th><th>Side</th><th>Seats</th><th>Invited to</th><th>Code</th><th>Status</th><th></th></tr>`+(EV.guests.length?EV.guests.map(g=>`<tr><td>${esc(g.name)}<br><span class="hint">${esc(g.phone)}</span></td><td>${esc(g.side)}</td><td class="num">${g.max}</td><td class="hint">${g.fns.map(id=>esc(EV.fns.find(f=>f.id===id)?.n||"")).join(", ")}</td><td class="num">${esc(g.code)}</td><td>${stPill(g)}</td><td style="white-space:nowrap"><a class="mini" href="${wa(g.phone,inviteText(g))}" rel="noopener">Send invite</a> <button class="mini" data-open="${esc(g.code)}">Preview</button> <button class="mini" data-rm="${g.id}">Remove</button></td></tr>`).join(""):`<tr><td colspan="7" class="hint">No guests yet.</td></tr>`)}
+$("#addGuest").onclick=()=>{const n=$("#gName").value.trim();if(!n){$("#gName").focus();toast("Add a guest name first");return}EV.guests.push({id:uid(),code:code(),name:n,phone:$("#gPhone").value.trim(),side:$("#gSide").value,max:Math.max(1,+$("#gMax").value||1),fns:$$("[data-gf]:checked").map(c=>c.dataset.gf),rsvp:null});$("#gName").value="";$("#gPhone").value="";saveEv();renderAll();toast("Guest added · code "+EV.guests.at(-1).code)};
+$("#addBulk").onclick=()=>{const rows=$("#bulk").value.split("\n").map(r=>r.split(",").map(x=>x.trim())).filter(r=>r[0]);rows.forEach(r=>EV.guests.push({id:uid(),code:code(),name:r[0],phone:r[1]||"",side:["Bride","Groom","Both"].find(s=>s.toLowerCase()===(r[2]||"").toLowerCase())||"Both",max:Math.max(1,+r[3]||1),fns:EV.fns.map(f=>f.id),rsvp:null}));$("#bulk").value="";saveEv();renderAll();toast(rows.length+" guests imported")};
+$("#gTable").onclick=e=>{const rm=e.target.closest("[data-rm]");if(rm){EV.guests=EV.guests.filter(g=>g.id!==rm.dataset.rm);saveEv();renderAll()}const op=e.target.closest("[data-open]");if(op){openRT("guest");$("#codeIn").value=op.dataset.open;openGuest(op.dataset.open)}};
+function renderDash(){const yes=EV.guests.filter(g=>g.rsvp?.status==="yes"),no=EV.guests.filter(g=>g.rsvp?.status==="no"),wait=EV.guests.filter(g=>!g.rsvp),meals={};
+ yes.forEach(g=>{const k=g.rsvp.meal||"Not given",c=Math.max(0,...Object.values(g.rsvp.count||{}));meals[k]=(meals[k]||0)+c});
+ const days=EV.deadline?Math.ceil((new Date(EV.deadline+"T23:59")-new Date())/864e5):null;
+ $("#kpis").innerHTML=[["Seats invited",EV.guests.reduce((a,g)=>a+g.max,0)],["Replied",`${yes.length+no.length}/${EV.guests.length}`],["Awaiting",wait.length],["Pickups",yes.filter(g=>g.rsvp.pickup).length],["Rooms",yes.filter(g=>g.rsvp.room).length],["Days to deadline",days===null?"—":Math.max(days,0)]].map(([l,v])=>`<div class="kpi"><b class="num">${v}</b><small>${l}</small></div>`).join("");
+ $("#fnTable").innerHTML=`<tr><th>Function</th><th>When</th><th>Invited</th><th>Attending</th><th>Not yet or no</th></tr>`+EV.fns.map(f=>{const inv=EV.guests.filter(g=>g.fns.includes(f.id)),att=inv.reduce((a,g)=>a+(g.rsvp?.status==="yes"?(g.rsvp.count?.[f.id]||0):0),0);return`<tr><td>${esc(f.n)}</td><td class="hint">${esc(fmtDate(f.date))} ${esc(f.time)}</td><td>${inv.reduce((a,g)=>a+g.max,0)}</td><td><b>${att}</b></td><td>${inv.filter(g=>!g.rsvp||g.rsvp.status==="no").length} parties</td></tr>`}).join("")+`<tr><td colspan="5" class="hint">Meals at peak: ${Object.entries(meals).map(([k,v])=>`${esc(k)} ${v}`).join(" · ")||"none yet"}</td></tr>`}
+$("#copyCsv").onclick=()=>{const head=["Name","Phone","Side","Seats","Code","Status",...EV.fns.map(f=>f.n),"Meal","Dietary","Arrival","Flight","Pickup","Room","Song","Message"],q=v=>`"${String(v??"").replace(/"/g,'""')}"`;copy([head.map(q).join(","),...EV.guests.map(g=>{const r=g.rsvp||{};return[g.name,g.phone,g.side,g.max,g.code,r.status||"pending",...EV.fns.map(f=>g.fns.includes(f.id)?(r.count?.[f.id]??""):"n/a"),r.meal,r.diet,r.arr,r.flight,r.pickup?"Yes":"",r.room?"Yes":"",r.song,r.msg].map(q).join(",")})].join("\n"),"Guest list copied. Paste into Excel or Google Sheets.")};
+$("#copyPickups").onclick=()=>copy(EV.guests.filter(g=>g.rsvp?.pickup).sort((a,b)=>(a.rsvp.arr||"").localeCompare(b.rsvp.arr||"")).map(g=>`${(g.rsvp.arr||"").replace("T"," ")} · ${g.rsvp.flight||"tbc"} · ${g.name} · ${g.phone}`).join("\n")||"No pickups yet.","Pickup list copied");
+$("#remindAll").onclick=()=>{const w=EV.guests.filter(g=>!g.rsvp);$("#reminders").innerHTML=w.length?`<p class="hint" style="margin-bottom:12px">Tap a name to send a WhatsApp reminder.</p><div class="chips">${w.map(g=>`<a class="mini" rel="noopener" href="${wa(g.phone,`Hi ${g.name}, a gentle reminder to RSVP for ${EV.couple}${EV.deadline?" by "+fmtDate(EV.deadline):""}. Your code is ${g.code}.`)}">${esc(g.name)}</a>`).join("")}</div>`:`<p class="hint">Everyone has replied.</p>`};
+function openGuest(c){c=(c||"").trim().toUpperCase();const g=EV.guests.find(x=>x.code===c);
+ if(!g){$("#codeErr").textContent=c?"We couldn't find that code. Check your invitation, or ask your host to resend it.":"Enter the code from your invitation.";$("#guestView").innerHTML="";return}$("#codeErr").textContent="";
+ const r=g.rsvp||{status:"yes",count:{},meal:"Vegetarian"},my=EV.fns.filter(f=>g.fns.includes(f.id));
+ const gcal=f=>{if(!f.date)return"";const s=(f.date+"T"+(f.time||"18:00")).replace(/[-:]/g,"")+"00";return`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(EV.couple+" · "+f.n)}&dates=${s}/${s}&location=${encodeURIComponent(f.venue||"")}`};
+ $("#guestView").innerHTML=`<div class="invite"><p class="label">${esc(EV.host)} invite you</p><h3>${esc(EV.couple)}</h3><p class="lede" style="margin:0 auto">Dear ${esc(g.name)}, ${esc(EV.note||"")}</p>
+  <div class="sched">${my.map(f=>`<div class="it"><small>${esc(fmtDate(f.date))}<br>${esc(f.time)}</small><div><b style="font:300 24px var(--display)">${esc(f.n)}</b><br><span style="color:#cbbfae">${esc(f.venue)}${f.dress?" · "+esc(f.dress):""}</span><br>${f.venue?`<a href="https://www.google.com/maps/search/${encodeURIComponent(f.venue)}" rel="noopener">Map</a> · `:""}${gcal(f)?`<a href="${gcal(f)}" rel="noopener">Add to calendar</a>`:""}</div></div>`).join("")}</div>
+  ${EV.hotel?`<p style="margin-top:22px;color:#cbbfae">Stay at ${esc(EV.hotel)}${EV.hotelCode?`, code <b style="color:#f6efe5">${esc(EV.hotelCode)}</b>`:""}${EV.hotelBy?`. Book by ${esc(fmtDate(EV.hotelBy))}`:""}.</p>`:""}</div>
+ <form id="rsvpForm" novalidate style="display:grid;gap:30px;margin-top:50px;max-width:860px">
+  <div class="chips" role="radiogroup" aria-label="Your reply"><label class="chip"><input type="radio" name="st" value="yes" ${r.status!=="no"?"checked":""}>Joyfully accept</label><label class="chip"><input type="radio" name="st" value="no" ${r.status==="no"?"checked":""}>Regretfully decline</label></div>
+  <div id="yesBlock" style="display:grid;gap:26px">
+   <div class="fgrid">${my.map(f=>`<div class="field"><label for="c_${f.id}">${esc(f.n)} · guests</label><select id="c_${f.id}" data-c="${f.id}">${Array.from({length:g.max+1},(_,i)=>`<option ${(r.count?.[f.id]??g.max)===i?"selected":""}>${i}</option>`).join("")}</select></div>`).join("")}</div>
+   <div class="fgrid"><div class="field"><label for="rMeal">Meal</label><select id="rMeal">${["Vegetarian","Jain","Swaminarayan","Vegan","Non-vegetarian","Kids' menu"].map(m=>`<option ${r.meal===m?"selected":""}>${m}</option>`).join("")}</select></div><div class="field"><label for="rDiet">Allergies or needs</label><input id="rDiet" value="${esc(r.diet||"")}" placeholder="Nut allergy, wheelchair access"></div></div>
+   <div class="fgrid"><div class="field"><label for="rArr">Arriving</label><input id="rArr" type="datetime-local" value="${esc(r.arr||"")}"></div><div class="field"><label for="rFlight">Flight or train</label><input id="rFlight" value="${esc(r.flight||"")}"></div></div>
+   <div class="chips"><label class="chip"><input type="checkbox" id="rPick" ${r.pickup?"checked":""}>I need an airport pickup</label><label class="chip"><input type="checkbox" id="rRoom" ${r.room?"checked":""}>I need a room in the block</label></div>
+   <div class="field"><label for="rSong">A song that gets you dancing</label><input id="rSong" value="${esc(r.song||"")}"></div>
+  </div>
+  <div class="field"><label for="rMsg">A message for the couple</label><textarea id="rMsg">${esc(r.msg||"")}</textarea></div>
+  <div><button class="btn" type="submit"><span>${g.rsvp?"Update my RSVP":"Send my RSVP"}</span></button></div><div id="rsvpDone"></div></form>`;
+ const form=$("#rsvpForm"),tog=()=>$("#yesBlock").style.display=form.st.value==="no"?"none":"grid";tog();form.onchange=tog;
+ form.onsubmit=ev=>{ev.preventDefault();const st=form.st.value;g.rsvp={status:st,count:st==="yes"?Object.fromEntries($$("[data-c]",form).map(s=>[s.dataset.c,+s.value])):{},meal:$("#rMeal").value,diet:$("#rDiet").value.trim(),arr:$("#rArr").value,flight:$("#rFlight").value.trim(),pickup:$("#rPick").checked,room:$("#rRoom").checked,song:$("#rSong").value.trim(),msg:$("#rMsg").value.trim(),updated:new Date().toISOString()};
+  if(st==="yes"&&Object.values(g.rsvp.count).every(v=>v===0))g.rsvp.status="no";saveEv();renderGuests();
+  if(CONFIG.RSVP_ENDPOINT)fetch(CONFIG.RSVP_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({event:EV.couple,code:g.code,rsvp:g.rsvp})}).catch(()=>{});
+  $("#rsvpDone").innerHTML=`<div class="ok"><b>${g.rsvp.status==="yes"?"See you there.":"Thank you for letting us know."}</b><p class="hint">Use code ${esc(g.code)} anytime to change your reply.</p></div>`}}
+$("#codeGo").onclick=()=>openGuest($("#codeIn").value);$("#codeIn").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();openGuest(e.target.value)}};
+function renderAll(){renderHost();renderGuests();renderDash()}
+
+/* ============ featured ============ */
+$("#leadPh").innerHTML=`<img src="${PHOTOS.press||"img/marigold-arch.jpg"}" alt="Sattva Weddings décor" loading="lazy"><figcaption class="cap">${PHOTOS.press?"From the feature":"Sattva Weddings décor"}</figcaption>`;
+const PRESS=[["WeddingSutra · Favorites","WeddingSutra Favorite wedding planner, Vadodara","Editor-curated planner listing","https://weddingsutra.com/vendor/sattva-weddings/"],["Apex Awards 2019","Best Concept & Design","Exotic Wedding Planning Conference India","https://weddingsutra.com/vendor/sattva-weddings/"],["WedMeGood","End-to-end wedding planning","20 couple reviews · Vadodara, Ahmedabad, Surat, Mumbai, Udaipur, Pune","https://www.wedmegood.com/profile/Sattva-Weddings-545401"],["WeddingWire India","Destination wedding planner","India and 15 international destinations","https://www.weddingwire.in/wedding-planners/sattva-weddings--e215693"],["Wedding.net","Mehendi, reception and wedding décor","Portfolio of 29 décor photographs","https://vadodara.wedding.net/planners/1632151/"]];
+$("#workRail").innerHTML=["aarti-gold","marigold-arch","mehendi-drapes","favours","stage-night","aarti-blue"].map(n=>`<figure class="rcard"><div class="ph"><img src="img/${n}.jpg" alt="Sattva Weddings ${n.replace("-"," ")}" loading="lazy"></div></figure>`).join("");
+$("#plist").innerHTML=PRESS.map(([s,t,m,u])=>`<a href="${u}" rel="noopener" class="reveal"><span><span class="label">${esc(s)}</span><b>${esc(t)}</b><span class="m">${esc(m)}</span></span><span class="arrow"><i></i></span></a>`).join("");
+
+$("#creditList").innerHTML=Object.entries(CREDITS).map(([f,c])=>`<a href="https://commons.wikimedia.org/wiki/File:${encodeURIComponent(c)}" rel="noopener"><span><span class="label">${esc(f.replace(/(-\d)?\.jpg$/,"").replace(/^./,m=>m.toUpperCase()))}</span><b>${esc(c.replace(/_/g," ").replace(/\.jpg$/i,""))}</b><span class="m">Wikimedia Commons · free licence, attribution on the linked page</span></span><span class="arrow"><i></i></span></a>`).join("");
+/* ============ contact ============ */
+$("#enqForm").addEventListener("submit",async e=>{e.preventDefault();const n=$("#qName").value.trim(),p=$("#qPhone").value.trim();if(!n||p.replace(/\D/g,"").length<8){$("#qErr").textContent="Please add your name and a WhatsApp number with country code.";return}$("#qErr").textContent="";
+ const msg=`New enquiry\nName: ${n}\nPhone: ${p}\nEmail: ${$("#qEmail").value}\nMonth: ${$("#qWhen").value||"—"}\n${$("#qMsg").value}`;await postLead("enquiry",{name:n,phone:p,email:$("#qEmail").value,when:$("#qWhen").value,msg:$("#qMsg").value});
+ $("#enqForm").hidden=true;$("#enqDone").hidden=false;$("#enqDone").innerHTML=`<div class="ok"><b>Thank you, ${esc(n.split(" ")[0])}.</b><p class="lede">We reply within one working day, in your time zone.</p><a class="btn" style="margin-top:22px" href="${wa(CONFIG.whatsapp,msg)}" rel="noopener"><span>Continue on WhatsApp</span></a></div>`});
+
+/* ============ global ============ */
+const waNum="+"+CONFIG.whatsapp.replace(/^(\d{2})(\d{5})(\d+)$/,"$1 $2 $3");
+$$(".wa-link").forEach(a=>{a.href=wa(CONFIG.whatsapp,"Hi Sattva Weddings, I'd like to plan my wedding.");a.textContent=waNum;a.rel="noopener"});
+$("#yr").textContent=new Date().getFullYear();
+$("#cur").value=CUR;$("#cur2").value=CUR;$("#cur2").onchange=e=>{$("#cur").value=e.target.value;$("#cur").onchange(e)};$("#cur").onchange=e=>{CUR=e.target.value;$("#cur2").value=CUR;store.set("sv_cur",CUR);renderEstimate();if(VIEW==="dest")renderDest(parse().id)};
+const cd=store.get("sv_cdate","");if(cd)$("#cDate").value=cd;else{const d=new Date();d.setMonth(d.getMonth()+10);$("#cDate").value=d.toISOString().slice(0,10)}
+renderChecklist();route();
+</script>
+<script src="cms.js"></script>
+</body>
+</html>
